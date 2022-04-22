@@ -1,0 +1,881 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+noscript{
+    background-color: rgb(199, 13, 13);
+    color: #fff;
+    width: 100%;
+}
+body{
+    background-color: #eeeeee;
+}
+body p{
+    font-family: "Open sans regular", arial, sans-serif;
+    font-size: 14pt;
+}
+body h1{
+    font-family: "Great Vibes", "Times New Roman", arial, serif;
+}
+body h2{
+    font-family: "Open sans regular", arial, sans-serif;
+    font-size: 18pt;
+    text-transform: uppercase;
+}
+body h3{
+    font-family: "Open sans regular", arial, sans-serif;;
+    text-transform: uppercase;
+}
+.span{
+    color: rgb(124, 126, 14);
+    text-decoration: underline;
+}
+/*------------------------------------------------*/
+/*---------------------HEADER---------------------*/
+/*------------------------------------------------*/
+#header{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../imagens/header-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#header-container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#navbar{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#logo{
+    color: rgb(255, 255, 255);
+    font-family: "Great Vibes", "Times New Roman", arial, serif;
+    font-size: 26pt;
+}
+#logo h1{
+    padding: 10px 0;
+}
+#bars{
+    display: none;
+}
+#links.show {
+    display: block;
+}
+.selected{
+    border-bottom: 2px solid rgb(124, 126, 14);
+}
+#links ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#links ul li{
+    padding: 30px 15px;
+    list-style-type: none;
+}
+#links ul li a{
+    padding: 0 0 10px 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 14pt;
+    font-family: "Open sans regular", arial, sans-serif;;
+    text-transform: uppercase;
+}
+#links ul li a:hover{
+    border-bottom: 2px solid rgb(124, 126, 14);
+}
+#welcome{
+    width: 35%;
+    display: block;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 8%;
+}
+#welcome h2{
+    text-transform: uppercase;
+}
+#welcome-logo p{
+    font-family: "Great Vibes", "Times New Roman", arial, serif;
+    font-size: 36pt;
+}
+.welcome-item{
+    padding: 15px 0;
+}
+#welcome-text p{
+    font-size: 16pt;
+}
+#welcome-text{
+    margin-bottom: 20px;
+}
+#btn-reservar{
+    padding: 15px 35px;
+    background-color: rgb(124, 126, 14);
+    color: rgb(255, 255, 255);
+    font-family: "Open sans regular", arial, sans-serif;
+    font-size: 12pt;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+#btn-reservar:hover{
+    background-color: rgb(159, 161, 24);
+}
+/*------------------------------------------------*/
+/*---------------------ACERCA DE NOS--------------*/
+/*------------------------------------------------*/
+#about-us{
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+}
+#about-us-container{
+    width: 70%;
+    min-height: 50vh;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.about-h2{
+    text-align: center;
+    padding: 30px 0;
+}
+.about{
+    width: 50%;
+    min-height: 50vh;
+    border-radius: 10px;
+}
+#about-text{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: relative;
+}
+.about-us-h3{
+    text-align: center;
+}
+.about-us-h3 h3:nth-child(1){
+    padding: 20px 0 0 0;
+    font-family: "Open sans regular", arial, sans-serif;;
+}
+.about-us-p{
+    text-align: justify;
+    padding: 30px 40px 0 40px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.about-us-h3-logo{
+    color: rgb(124, 126, 14);
+    font-family: "Great Vibes", "Times New Roman", arial, serif;
+    font-size: 26pt;
+    text-transform: unset;
+}
+#about-img{
+    background-image: url(../imagens/form-bg.jpg);
+    background-size: cover;
+}
+
+/*------------------------------------------------*/
+/*---------------------NOSSOS SERVICOS------------*/
+/*------------------------------------------------*/
+#services{
+    width: 100%;
+    min-height: 95vh;
+    position: relative;
+}
+#our-services-h2{
+    width: 100%;
+    text-align: center;
+}
+#our-services-h2 h2{
+    padding: 20px 0 40px 0;
+}
+.services-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+.services-container h3{
+    font-size: 12pt;
+}
+.services{
+    width: 30%;
+    margin-bottom: 30px;
+    min-height: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+}
+.services-img img{
+    padding: 20px 0 0 0;
+    width: 15%;
+    height: 20%;
+}
+.services-title, .services-p{
+    padding: 10px 0;
+}
+.services-title{
+    padding: 20px 0;
+}
+.services-p{
+    padding: 0 20px 30px 20px;
+    font-size: 14pt;
+    text-align: left;
+    text-align: center;
+}
+/*------------------------------------------------*/
+/*---------------------coments------------*/
+/*------------------------------------------------*/
+#coments-clients{
+    width: 100%;
+    min-height: 70vh;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.coments-container{
+    width: 80%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    position: relative;
+}
+.coments-slider{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+}
+.coment-h2{
+    width: 100%;
+}
+#coment-sub{
+    text-align: center;
+    padding: 30px 0;
+}
+.coments{
+    background-color: rgb(124, 126, 14);
+    width: 35%;
+    min-height: 260px;
+    margin: auto auto;
+    border-radius: 10px;
+}
+.arrow{
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto auto;
+}
+.profile{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: block;
+    margin: -15% auto 0 auto;
+}
+.coment, .client{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.client{
+    font-weight: bold;
+}
+.coment{
+    padding: 20px;
+}
+
+
+
+
+/* .divs{
+    opacity: 0;
+    transition: opacity 800ms;
+ }
+ .divs{
+     display: flex;
+     flex-direction: row;
+     position: absolute;
+ }
+ #segunda{
+     display: none; */
+ /* }
+ .coments-slider .selected{
+     opacity: 1;
+ } */
+/*------------------------------------------------*/
+/*-----------------------CONTACTO-----------------*/
+/*------------------------------------------------*/
+#contact{
+    width: 100%;
+    min-height: 65vh;
+}
+.contact-h2, #contact-container{
+    width: 100%;
+}
+.contact-h2{
+    text-align: center;
+    font-family: "Open sans regular", arial, sans-serif;;
+    padding: 0 0 50px 0;
+    background-color: rgb(255, 255, 255);
+}
+#contact-container{
+    display: flex;
+    flex-direction: row;
+    min-height: 65vh;
+}
+#map-container{
+    width: 60%;
+}
+#map{
+    width: 100%;
+    min-height: 100%;
+}
+#address{
+    width: 40%;
+    background-image: url(../imagens/front-barber-shop.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.fader-contact{
+    background-color: rgba(0,0,0,.7);
+    min-height: 100%;
+}
+#address h3, #address p{
+    margin-left: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+#address h3{
+    padding: 20px 0;
+    font-family: "Open sans regular", arial, sans-serif;;
+    color: rgb(124, 126, 14);
+}
+#address p{
+    color: rgb(255, 255, 255);
+}
+
+/*------------------------------------------------*/
+/*---------------------FORMULARIO RESERVA----------*/
+/*------------------------------------------------*/
+.alert-reserva{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+#erro-reserva{
+    background-color: rgb(241, 33, 33);
+}
+#sucesso-reserva{
+    background-color: rgb(6, 167, 19);
+}
+#formulario-reserva{
+    width: 100%;
+    min-height: 70vh;
+    height: auto;
+    position: relative;
+}
+.formulario-reserva-container{
+    background-image: url(../imagens/form-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#fader{
+    width: 100%;
+    min-height: 70vh;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#formulario-container{
+   width: 50%;
+   height: 100%;
+   margin: auto;
+   display: flex;
+   flex-direction: row;
+}
+.formulario-h2{
+    background-color: rgb(255, 255, 255);
+}
+#form-h2{
+    color: #000;
+    text-align: center;
+    padding: 50px 0;
+}
+.reserva{
+    color: rgb(174, 177, 6);
+    text-decoration: underline;
+}
+.form{
+    width: 50%;
+}
+.form label{
+    color: #fff;
+    margin-left: 10%;
+    padding: 10px 0 10px 0;
+    font-family: "Open sans regular", arial, sans-serif;;
+}
+input, select, textarea, label, #preco{
+    display: block;
+    margin: 0 auto;
+}
+input, select, textarea{
+    outline: none;
+    background-color: rgb(252, 250, 250);
+    border: none;
+}
+input, #preco{
+    width: 80%;
+    height: 40px;
+    padding: 0 0 0 8px;
+}
+#preco{
+    background-color: #fff;
+    line-height: 40px;
+    text-align: center;
+}
+#valor,#preco{
+    font-family: "Open sans regular", arial, sans-serif
+}
+select{
+    width: 83%;
+    padding: 0 0 0 8px;
+    height: 40px;
+}
+textarea{
+    width: 80%;
+    margin-bottom: 15px;
+    padding: 5px 0 0 8px;
+    resize: none;
+}
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+#btn-submit{
+    background-color: rgb(124, 126, 14);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 30px;
+    height: 45px;
+}
+#btn-submit:hover{
+    background-color: rgb(159, 161, 24);
+    cursor: pointer;
+}
+/*------------------------------------------------*/
+/*---------------------RODAPE---------------------*/
+/*------------------------------------------------*/
+#footer{
+    position: relative;
+}
+#footer, .footer-container{
+    width: 100%;
+    background-color: #000;
+}
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+}
+.footer-container h1{
+    font-size: 32pt;
+    color: rgb(124, 126, 14);
+    font-family: "Great Vibes", "Times New Roman", arial, serif;
+}
+.footer-item{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#social-media img{
+    width: 40px;
+    height: 40px;
+    margin: 0 20px;
+    
+}
+#developer{
+    text-align: center;
+    padding: 20px 0;
+}
+#developer p{
+    color: rgb(255, 255, 255);
+}
+#author{
+    color: rgb(124, 126, 14);
+}
+
+/*------------------------------------------------*/
+/*---------------------@MEDIA---------------------*/
+/*------------------------------------------------*/
+@media screen and (max-width: 360px){
+
+    #welcome-btn{
+        padding: 0 0 40px 0;
+    }
+}
+@media screen and (max-width: 571px){
+    #navbar{
+        width: 100%;
+        flex-direction: column;
+    }
+    #logo, #links{
+       width: 100%;
+    }
+    #logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #logo h1{
+        font-size: 30pt;
+    }
+    #bars{
+        display: block;
+        width: 40px;
+        height: 40px;
+        padding: 10px 0;
+        margin-right: 20px;
+    }
+    #links{
+	    position: absolute;
+	    top: 4.5rem;
+       display:none;
+    }
+    #links ul{
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        background-color: rgb(124, 126, 14);
+        height: 100%;
+    }
+    #links ul li{
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+    }
+    #links ul li a{
+        width: 100%;
+    }
+    #links ul li:hover{
+        background-color: rgb(124, 126, 14);
+    }
+    #welcome{
+        width: 90%;
+        margin-top: 20%;
+    }
+    #welcome-btn{
+        padding: 0 0 40px 0;
+    }
+/*------------------------------------------------*/
+/*---------------------ACERCA DE NOS--------------*/
+/*------------------------------------------------*/
+#about-us-container{
+    width: 100%;
+    flex-direction: column;
+}
+.about{
+    width: 100%;
+}
+#about-img{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/*------------------------------------------------*/
+/*---------------------NOSSOS SERVICOS------------*/
+/*------------------------------------------------*/
+.services-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 85%;
+}
+.services{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    min-height: 250px;
+}
+.services-p{
+    padding: 0 20px 30px 20px;
+}
+/*------------------------------------------------*/
+/*---------------------COMENTS------------*/
+/*------------------------------------------------*/
+.coments-container, .coments-slider, .coments{
+    width: 100%;
+}
+#coment-2{
+    display: none;
+}
+.client{
+    margin-bottom: 20px;
+}
+/*------------------------------------------------*/
+/*-------------------------CONTACTO---------------*/
+/*------------------------------------------------*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#contact-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#map-container, #map, #address{
+    width: 100%;
+}
+
+/*------------------------------------------------*/
+/*------------------FORMULARIO RESERVA------------*/
+/*------------------------------------------------*/
+#formulario-container{
+    width: 100%;
+    flex-direction: column;
+}
+.form{
+    width: 95%;
+    margin: auto;
+}
+#left-form{
+    margin-bottom: 0;
+}
+/*------------------------------------------------*/
+/*---------------------RODAPE---------------------*/
+/*------------------------------------------------*/
+.footer-container{
+    width: 100%;
+    flex-direction: column;
+}
+.footer-item{
+    width: 100%;
+    line-height: 100px;
+}
+
+}
+/*---------------------------MEDIA 572 - 768-----------------------*/
+
+@media screen and (min-width: 572px) and (max-width: 768px){
+
+#navbar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#links{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+#welcome{
+    margin-top: 15%;
+    width: 80%;
+}
+#welcome-btn{
+    padding: 0 0 40px 0;
+}
+/*------------------------------------------------*/
+/*---------------------ACERCA DE NOS--------------*/
+/*------------------------------------------------*/
+#about-us{
+    min-height: 30vh;
+    position: relative;
+}
+#about-us-container{
+    width: 95%;
+    min-height: 30vh;
+}
+.about{
+    width: 50%;
+    min-height: 30vh;
+}
+/*------------------------------------------------*/
+/*---------------------SERVICOS------------*/
+/*------------------------------------------------*/
+#our-services-h2 h2{
+    padding: 10px 0 30px 0;
+}
+.services-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+#services{
+    margin-bottom: 50px;
+}
+.services{
+    width: 48%;
+    margin: 5px;
+}
+.services-p{
+    padding: 0 20px 20px 20px;
+}
+/*------------------------------------------------*/
+/*-------------------------CONTACTO---------------*/
+/*------------------------------------------------*/
+#coments-clients{
+    min-height: 40vh;
+}
+.coments-container, .coments-slider, .coments{
+    width: 85%;
+}
+#coment-2{
+    display: none;
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#contact-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#map-container, #map, #address{
+    width: 100%;
+}
+/*------------------------------------------------*/
+/*---------------------FORMULARIO RESERVA------------*/
+/*------------------------------------------------*/
+#formulario-container{
+    width: 80%;
+    flex-direction: row;
+}
+/*------------------------------------------------*/
+/*---------------------RODAPE---------------------*/
+/*------------------------------------------------*/
+.footer-item{
+    line-height: 80px;
+}
+#social-media a{
+    margin-top: 5%;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    #welcome{
+        margin-top: 20%;
+        width: 70%;
+    }
+/*------------------------------------------------*/
+/*---------------------ACERCA DE NOS--------------*/
+/*------------------------------------------------*/
+#about-us{
+    min-height: 30vh;
+    position: relative;
+}
+#about-us-container{
+    width: 95%;
+    min-height: 30vh;
+}
+.about{
+    min-height: 30vh;
+}
+/*---------------------SERVICOS------------*/
+#services{
+    min-height: 60vh;
+}
+    .services-container{
+        width: 95%
+    }
+/*---------------------coments--------------------*/
+#coments-clients{
+    width: 100%;
+    min-height: 45vh;
+}
+.coments-container{
+    width: 95%;
+}
+.coments{
+    width: 45%;
+}
+.client{
+    margin-bottom: 20px;
+}
+/*-------------------------CONTACTO---------------*/
+#contact, #contact-container{
+    min-height: 40vh;
+}
+
+/*---------------------FORMULARIO RESERVA------------*/
+#formulario-reserva{
+    height: 40vh;
+}
+#formulario-container{
+    width: 80%;
+    flex-direction: row;
+}
+
+/*-------------------------RODAPE-----------------------*/
+.footer-item{
+    line-height: 80px;
+}
+#social-media a{
+    margin-top: 3%;
+}
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    #welcome{
+        width: 50%;
+    }
+/*------------------------------------------------*/
+/*---------------------ACERCA DE NOS--------------*/
+/*------------------------------------------------*/
+#about-us{
+    min-height: 30vh;
+    position: relative;
+}
+#about-us-container{
+    width: 80%;
+    min-height: 30vh;
+}
+.about{
+    min-height: 30vh;
+}
+/*---------------------SERVICOS-----------------------*/
+    .services-container{
+        width: 90%;
+    }
+/*---------------------coments--------------------*/
+.coments{
+    width: 45%;
+}
+.client{
+    margin-bottom: 20px;
+}
+/*---------------------FORMULARIO RESERVA------------*/
+    #formulario-container{
+        width: 70%;
+        height: 90vh;
+        flex-direction: row;
+    }
+/*-------------------------RODAPE-----------------------*/
+.footer-item{
+    line-height: 80px;
+}
+#social-media a{
+    margin-top: 3%;
+}
+}

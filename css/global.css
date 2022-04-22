@@ -1,0 +1,26 @@
+@font-face{
+    font-family: "Open sans regular";
+    src: url(../fontes/OpenSans-Regular.woff);
+}
+@font-face {
+    font-family: "Great Vibes";
+    src: url(../fontes/GreatVibes-Regular.woff);
+}
+:root{
+    --body-bg-color: #eeeeee;
+    --white: rgb(255, 255, 255);
+    --brown: rgb(124, 126, 14);
+    --brown-hover: rgb(159, 161, 24);
+    --black: #000;
+    --fade-black: rgba(0, 0, 0, 0.6);
+    --text-font-family: "Open sans regular", arial, sans-serif;
+    --title-font-family: "Great Vibes", "Times New Roman", arial, serif;
+    --title-font-size: 26pt;
+    --h2-font: "Open sans regular", arial, sans-serif;
+    --h3-font: "Open sans regular", arial, sans-serif;
+    --subtitle-font-size: 18pt;
+    --text-font-size: 14pt;
+}
+html{
+    scroll-behavior: smooth;
+}
