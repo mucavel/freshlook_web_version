@@ -8,20 +8,19 @@ function show(){
 let datepicker = document.getElementById("dia");
 datepicker.min = new Date().toISOString().split("T")[0];
 //BLOQUEAR DATAS FUTURAS
-let dia = new Date();
-let dd = dia.getDate()+ 13;
-let mm = dia.getMonth() + 1;
-let yyyy = dia.getFullYear();
+// let dia = new Date();
+// let dd = dia.getDate()+ 13;
+// let mm = dia.getMonth() + 1;
+// let yyyy = dia.getFullYear();
 
-if(dd < 10){
-    dd = '0'+ dd;
-}
-if(mm < 10){
-    mm = '0'+ mm;
-}
-data_futura = yyyy + '-' + mm + '-' + dd;
-datepicker.setAttribute("max", data_futura);
-console.log(data_futura)
+// if(dd < 10){
+//     dd = '0'+ dd;
+// }
+// if(mm < 10){
+//     mm = '0'+ mm;
+// }
+// data_futura = yyyy + '-' + mm + '-' + dd;
+// datepicker.setAttribute("max", data_futura);
 //CARROSSEL
  //PRECO
  let preco = document.getElementById('valor');
