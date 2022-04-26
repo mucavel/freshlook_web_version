@@ -251,20 +251,20 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                         if(isset($_POST['nome'])):
                             $nome = addslashes($_POST['nome']);
                             if(!$booking->nomeVerif($nome)):?>
-                            <p id="erro-nome" class="alert-reserva">Nome inválido!</p>
+                                <p id="erro-nome" class="alert-reserva">Nome inválido!</p>
                             <?php else:
-                            $telefone = addslashes($_POST['telefone']);
+                                $telefone = addslashes($_POST['telefone']);
                             if(!$booking->telVerif($telefone)): ?>
-                            <p id="erro-numero" class="alert-reserva">Número inválido!</p>
+                                <p id="erro-numero" class="alert-reserva">Número inválido!</p>
                             <?php else:
-                            $idade = addslashes($_POST['idade']);
+                                $idade = addslashes($_POST['idade']);
                             if(!$booking->idadeVerif($idade)): ?>
-                            <p id="erro-idade" class="alert-reserva">Idade inválida!</p>
+                                <p id="erro-idade" class="alert-reserva">Idade inválida!</p>
                             <?php
                             else:
-                            $corte = addslashes($_POST['corte']);
+                                $corte = addslashes($_POST['corte']);
                             if(!$booking->corteVerif($corte)): ?>
-                            <p id="erro-corte" class="alert-reserva">Selecione o corte</p>
+                                <p id="erro-corte" class="alert-reserva">Selecione o corte</p>
                             <?php else:
                             $preco;
                             switch ($corte) {
@@ -346,7 +346,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                         </div>
                         <div id="right-form" class="form">
                             <label for="data">Data*</label>
-                            <input type="date" class="form-item" name="dia" id="dia" max="2022-04-18" required>
+                            <input type="date" class="form-item" name="dia" id="dia" required>
                         <?php
                             //HORARIO DE FUNCIONAMENTO
                             $dia = date('w');
