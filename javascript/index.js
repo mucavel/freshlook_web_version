@@ -11,7 +11,7 @@ datepicker.min = new Date().toISOString().split("T")[0];
 datepicker.addEventListener("change", () =>{
     let dia = new Date(datepicker.value);
     let diaSemana = dia.getDay();
-    let selectHora = document.getElementById("hora");
+    let Hora = document.getElementById("hora");
     if(diaSemana >=1 && diaSemana <=5){
         var horaMin = 8;
         var horaMax = 22;
@@ -32,16 +32,17 @@ datepicker.addEventListener("change", () =>{
             opt2.value = i+":30";
             opt.innerHTML = (i+":00");
             opt2.innerHTML = (i+ ":30");
-            selectHora.appendChild(opt);
-            selectHora.appendChild(opt2);
+            Hora.appendChild(opt);
+            Hora.appendChild(opt2);
             console.log(opt.value + " "+opt2.value)
         }
     }
 
     function removerHora(){
-        let length = selectHora.options.length;
+        let length = Hora.options.length;
+        let sele
         for (j = length-1; j >= 0; j--) {
-          selectHora.options[j] = null;
+          Hora.options[j] = null;
         }    
     } 
 })
