@@ -41,7 +41,7 @@ datepicker.addEventListener("change", () =>{
     function removerHora(){
         let length = selectHora.options.length;
         for (j = length-1; j >= 0; j--) {
-          selectHora.options[i] = null;
+          selectHora.options[j] = null;
         }    
     } 
 })
