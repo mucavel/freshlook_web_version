@@ -51,13 +51,6 @@ Class Booking{
         }else{
             return false;
         }
-
-        // $nome = str_replace(" ", "", $name);
-        // if(!ctype_alpha($nome)){
-        //     return false;
-        // }else{
-        //     return true;
-        // }
     }
 
     //VALIDAR TELEFONE
