@@ -321,16 +321,16 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                     
                     <form id="formulario-container" method="POST">
                         <div id="left-form" class="form">
-                            <label for="nome">Nome*</label>
+                            <label for="nome">Nome<span class="asteristico"> *</span></label>
                             <input type="text" class="form-item" name="nome" id="nome" placeholder="Nome"
                                 autocomplete="off" required maxlength="30">
-                            <label for="telefone">Telefone*</label>
+                            <label for="telefone">Telefone<span class="asteristico"> *</span></label>
                             <input type="tel" class="form-item" name="telefone" id="telefone" placeholder="Telefone"
                                 autocomplete="off" required maxlength="9">
-                            <label for="idade">Idade*</label>
+                            <label for="idade">Idade<span class="asteristico"> *</span></label>
                             <input type="text" pattern="\d*" class="form-item" name="idade" id="idade" placeholder="Idade (6-80 anos)"
                                 autocomplete="off" required maxlength ="2">
-                            <label for="corte">Corte*</label>
+                            <label for="corte">Corte<span class="asteristico"> *</span></label>
                             <select class="select" name="corte" id="corte" required>
                                 <option value="">Selecione o corte</option>
                                 <option value="Juba">Juba</option>
@@ -345,10 +345,10 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                             <div id="preco" class="preco"><span id="valor" class="valor"></span> Meticais</div>
                         </div>
                         <div id="right-form" class="form">
-                            <label for="data">Data*</label>
+                            <label for="data">Data<span class="asteristico"> *</span></label>
                             <input type="date" class="form-item" name="dia" id="dia" required>
                         <?php
-                            $selectHora = "<label for='hora'>Hora*</label>
+                            $selectHora = "<label for='hora'>Hora<span class='asteristico'> *</span></label>
                                             <select name='hora' id='hora' required>";
                             $selectHora .= "</select>";
 
