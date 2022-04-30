@@ -87,7 +87,7 @@ Class Booking{
     public function idadeVerif($idade){
         if(!is_numeric($idade)){
             return false;
-        }elseif($idade <=5 || $idade >=80){
+        }elseif($idade <=5 || $idade >80){
             return false;
         }else{
             return true;

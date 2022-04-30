@@ -348,21 +348,8 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                             <label for="data">Data*</label>
                             <input type="date" class="form-item" name="dia" id="dia" required>
                         <?php
-                            //HORARIO DE FUNCIONAMENTO
-                            $dia = date('w');
-                            if($dia >= 1 && $dia <=5){
-                                $horaMin = 8;
-                                $horaMax = 22;
-                            }else{
-                                $horaMin = 9;
-                                $horaMax = 19;
-                            }
                             $selectHora = "<label for='hora'>Hora*</label>
-                                        <select name='hora'>";
-                            for($i=$horaMin; $i<$horaMax; $i++){
-                                $selectHora .= "<option value='{$i}:00'> {$i}:00 </option>";
-                                $selectHora .= "<option value='{$i}:30'> {$i}:30 </option>";
-                            }
+                                            <select name='hora' id='hora' required>";
                             $selectHora .= "</select>";
 
                             echo $selectHora;
