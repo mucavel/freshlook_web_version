@@ -1,8 +1,8 @@
 <?php
 Class Booking{
-
-    private $conexao;
+    
     //CONEXAO
+    private $conexao;
     public function __construct($dbname, $host, $user, $password){
         try {
             $this->conexao = new PDO("mysql:dbname=".$dbname.";host=".$host, $user, $password);

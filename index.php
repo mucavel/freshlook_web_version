@@ -39,7 +39,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
             </nav>
             <div id="welcome">
                 <div id="welcome-title" class="welcome-item">
-                    <h2>Bem-Vindo a barbearia</h2>
+                    <h2>Bem-Vindo à barbearia</h2>
                 </div>
                 <div id="welcome-logo" class="welcome-item">
                     <p>Fresh Look</p>
@@ -182,7 +182,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
         <!------------------------------------------------------------------->
         <section id="coments-clients">
             <div class="coment-h2">
-                <h2 id="coment-sub">Comentário dos <span class="span">nossos Clientes</span></h2>
+                <h2 id="coment-sub">Comentários dos <span class="span">nossos Clientes</span></h2>
             </div>
             <div class="coments-container">
                 <img class="arrow" src="imagens/seta-reverse.png" alt="seta">
@@ -226,10 +226,10 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                         <p>Avenida Mao Tse Tung, Nº 412, Maputo</p>
                         <p style="color: #fff">Telefone: (+258) 845509796</p>
                         <h3>Horários</h3>
-                        <p>Segunda - Sexta-feira</p>
-                        <p>Das 08:00 as 21:30</p>
+                        <p>Segunda à Sexta-feira</p>
+                        <p>Das 08:00 às 21:30</p>
                         <p>Finais de semana</p>
-                        <p>09:00 as 18:30</p>
+                        <p>Das 09:00 às 18:30</p>
                     </div>
                 </div>
             </div>
@@ -342,7 +342,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                                 <option value="Cabelo e Barba">Cabelo & Barba</option>
                             </select>
                             <label for="preco">Preço</label>
-                            <div id="preco" class="preco"><span id="valor" class="valor"></span> Meticais</div>
+                            <div id="preco" class="preco"><span id="valor" class="valor"></span> </div>
                         </div>
                         <div id="right-form" class="form">
                             <label for="data">Data<span class="asteristico"> *</span></label>

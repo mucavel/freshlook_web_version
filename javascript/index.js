@@ -24,7 +24,7 @@ datepicker.addEventListener("change", () =>{
         horaDinamica();  
     }
 
-    function horaDinamica(diaSemana){
+    function horaDinamica(){
         for(i = horaMin; i < horaMax; i++){
             let opt = document.createElement("option");
             let opt2 = document.createElement("option");
@@ -40,7 +40,6 @@ datepicker.addEventListener("change", () =>{
 
     function removerHora(){
         let length = Hora.options.length;
-        let sele
         for (j = length-1; j >= 0; j--) {
           Hora.options[j] = null;
         }    
@@ -57,28 +56,28 @@ function mostrarPreco(){
 
     switch (valor) {
         case "":
-            preco.innerText = "0";
+            preco.innerText = "";
             break;
         case "Juba":
-            preco.innerText = "50";
+            preco.innerText = "50 Meticais";
             break;
         case "Carreca":
-            preco.innerText = "80";
+            preco.innerText = "80 Meticais";
             break;
         case "Punk":
-            preco.innerText = "150";
+            preco.innerText = "150 Meticais";
             break; 
         case "Escovinha Grossa":
-            preco.innerText = "120";
+            preco.innerText = "120 Meticais";
             break; 
         case "Escovinha Fina":
-            preco.innerText = "100";
+            preco.innerText = "100 Meticais";
             break;
         case "Barba":
-            preco.innerText = "130";
+            preco.innerText = "130 Meticais";
             break;
         case "Cabelo e Barba":
-            preco.innerText = "200";
+            preco.innerText = "200 Meticais";
             break;
         default:
             break;
