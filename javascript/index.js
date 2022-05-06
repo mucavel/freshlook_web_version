@@ -3,7 +3,22 @@ let bars = document.getElementById("bars").addEventListener("click", show);
 function show(){
     document.getElementById('links').classList.toggle('show');
 }
+//DARKMODE
+let theme = document.getElementById("theme").addEventListener("click", ()=>{
+    let fadeHeader = document.getElementById("header-container").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+    let body = document.getElementsByTagName("body")[0].classList.add("bodyDark");
+    let aboutContainer = document.getElementById("about-us-container");
+    let aboutTxt = document.getElementById("about-text").classList.add("about-text");
+    let paragraph = document.querySelector("body").classList.add("bodyP");
+    let servicesSect = document.getElementById("services").style.backgroundColor = "rgb(0, 0, 0)";
+    for(let i = 0; i<=5; i++){
+        let servicesCont = document.getElementsByClassName("services")[i].style.backgroundColor = "rgb(19, 19, 19)";
+    }
+    let comentsClient = document.getElementById("coments-clients").style.backgroundColor = "rgb(7, 7, 8)";
+    let contactH2 = document.getElementsByClassName("contact-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
+    let formH2 = document.getElementsByClassName("formulario-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
 
+})
 //DATEPICKER-BLOQUEAR DATAS PASSADAS
 var datepicker = document.getElementById("dia");
 datepicker.min = new Date().toISOString().split("T")[0];
@@ -34,7 +49,6 @@ datepicker.addEventListener("change", () =>{
             opt2.innerHTML = (i+ ":30");
             Hora.appendChild(opt);
             Hora.appendChild(opt2);
-            console.log(opt.value + " "+opt2.value)
         }
     }
 

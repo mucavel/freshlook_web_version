@@ -7,7 +7,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, user-scalable=0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/old_browser.css">
@@ -34,6 +34,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                         <li class="link" id="link-3"><a href="#services">Serviços</a></li>
                         <li class="link" id="link-4"><a href="#contact">Contacto</a></li>
                         <li class="link" id="link-5"><a href="#formulario-reserva">Reserva</a></li>
+                        <li id="theme" style="color: #fff; cursor: pointer; background-color: rgb(55,55,55);">Aparencia</li>
                     </ul>
                 </div>
             </nav>

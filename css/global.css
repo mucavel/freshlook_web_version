@@ -7,12 +7,12 @@
     src: url(../fontes/GreatVibes-Regular.woff);
 }
 :root{
-    --body-bg-color: #fff;
+    --body-bg-color: rgb(255, 255, 255);
     --grey: #eeeeee;
     --white: rgb(255, 255, 255);
     --brown: rgb(124, 126, 14);
     --brown-hover: rgb(159, 161, 24);
-    --black: #000;
+    --black: rgb(0, 0, 0);
     --fade-black: rgba(0, 0, 0, 0.6);
     --text-font-family: "Open sans regular", arial, sans-serif;
     --title-font-family: "Great Vibes", "Times New Roman", arial, serif;
@@ -21,8 +21,26 @@
     --h3-font: "Open sans regular", arial, sans-serif;
     --subtitle-font-size: 18pt;
     --text-font-size: 14pt;
+
+
 }
 html{
     scroll-behavior: smooth;
 }
+/*-------------DARK MODE----------------*/
 
+.bodyDark, .about-us-container, .coments-clients{
+    background-color: rgb(7, 7, 8);
+}
+.bodyP, .bodyH2, .bodyH3{
+    color: rgb(255, 255, 255);
+}
+.about-text, .services-container-dark{
+    background-color: rgb(19, 19, 19);
+}
+.coments-dark{
+    background-color: rgb(74, 75, 5);
+}
+.contact-h2-dark, .formulario-h2-dark, .services-section{
+    background-color: rgb(0, 0, 0);
+}
