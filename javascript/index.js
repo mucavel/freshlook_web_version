@@ -4,20 +4,9 @@ function show(){
     document.getElementById('links').classList.toggle('show');
 }
 //DARKMODE
-let theme = document.getElementById("theme").addEventListener("click", ()=>{
-    let fadeHeader = document.getElementById("header-container").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-    let body = document.getElementsByTagName("body")[0].classList.add("bodyDark");
-    let aboutContainer = document.getElementById("about-us-container");
-    let aboutTxt = document.getElementById("about-text").classList.add("about-text");
-    let paragraph = document.querySelector("body").classList.add("bodyP");
-    let servicesSect = document.getElementById("services").style.backgroundColor = "rgb(0, 0, 0)";
-    for(let i = 0; i<=5; i++){
-        let servicesCont = document.getElementsByClassName("services")[i].style.backgroundColor = "rgb(19, 19, 19)";
-    }
-    let comentsClient = document.getElementById("coments-clients").style.backgroundColor = "rgb(7, 7, 8)";
-    let contactH2 = document.getElementsByClassName("contact-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
-    let formH2 = document.getElementsByClassName("formulario-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
-
+let imgTheme = document.getElementById("mode").addEventListener("click", ()=>{
+    document.cookie = "theme = dark";
+    location.reload();
 })
 //DATEPICKER-BLOQUEAR DATAS PASSADAS
 var datepicker = document.getElementById("dia");
@@ -115,3 +104,27 @@ mostrarPreco();
 // }
 // data_futura = yyyy + '-' + mm + '-' + dd;
 // datepicker.setAttribute("max", data_futura);
+
+//DARKMODE
+// let theme = document.getElementById("theme").addEventListener("click", ()=>{
+//     // let head = document.getElementsByTagName('HEAD')[0]; 
+//     // let link = document.createElement('link');
+//     // link.rel = 'stylesheet'; 
+//     // link.type = 'text/css';
+//     // link.href = 'css/darkmode.css'; 
+//     // head.appendChild(link);
+//     let fadeHeader = document.getElementById("header-container").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+//     let body = document.getElementsByTagName("body")[0].classList.toggle("bodyDark");
+//     let aboutContainer = document.getElementById("about-us-container");
+//     let aboutTxt = document.getElementById("about-text").classList.toggle("about-text");
+//     let paragraph = document.querySelector("body").classList.toggle("bodyP");
+//     let servicesSect = document.getElementById("services").style.backgroundColor = "rgb(0, 0, 0)";
+//     for(let i = 0; i<=5; i++){
+//         let servicesCont = document.getElementsByClassName("services")[i].style.backgroundColor = "rgb(19, 19, 19)";
+//     }
+//     let comentsClient = document.getElementById("coments-clients").style.backgroundColor = "rgb(7, 7, 8)";
+//     let contactH2 = document.getElementsByClassName("contact-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
+//     let formH2 = document.getElementsByClassName("formulario-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
+//     themes = "dark";
+//     document.cookie = "theme="+themes;
+// })

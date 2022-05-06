@@ -68,6 +68,11 @@ body h3{
 #bars{
     display: none;
 }
+#mode{
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+}
 #links.show {
     display: block;
 }
@@ -244,7 +249,7 @@ body h3{
 #coments-clients{
     width: 100%;
     min-height: 70vh;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     position: relative;
 }
 .coments-container{
@@ -314,7 +319,7 @@ body h3{
     text-align: center;
     font-family: var(--text-font-family);
     padding: 0 0 50px 0;
-    background-color: var(--white);
+    /* background-color: var(--white); */
 }
 #contact-container{
     display: flex;
@@ -386,16 +391,16 @@ body h3{
     height: auto;
     background-color: var(--fade-black);
 }
-#formulario-container{
+#formulario{
    width: 50%;
    height: 100%;
    margin: auto;
    display: flex;
    flex-direction: row;
 }
-.formulario-h2{
+/* .formulario-h2{
     background-color: var(--white);
-}
+} */
 #form-h2{
     text-align: center;
     padding: 50px 0;
@@ -642,7 +647,7 @@ input[type="date"]::-webkit-inner-spin-button {
 /*------------------------------------------------*/
 /*------------------FORMULARIO RESERVA------------*/
 /*------------------------------------------------*/
-#formulario-container{
+#formulario{
     width: 100%;
     flex-direction: column;
 }
@@ -751,7 +756,7 @@ input[type="date"]::-webkit-inner-spin-button {
 /*------------------------------------------------*/
 /*---------------------FORMULARIO RESERVA------------*/
 /*------------------------------------------------*/
-#formulario-container{
+#formulario{
     width: 80%;
     flex-direction: row;
 }
@@ -815,7 +820,7 @@ input[type="date"]::-webkit-inner-spin-button {
 #formulario-reserva{
     height: 40vh;
 }
-#formulario-container{
+#formulario{
     width: 80%;
     flex-direction: row;
 }
@@ -860,7 +865,7 @@ input[type="date"]::-webkit-inner-spin-button {
     margin-bottom: 20px;
 }
 /*---------------------FORMULARIO RESERVA------------*/
-    #formulario-container{
+    #formulario{
         width: 70%;
         height: 90vh;
         flex-direction: row;

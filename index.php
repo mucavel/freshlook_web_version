@@ -1,6 +1,10 @@
 <?php
 require_once 'booking.php';
 $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
+$themeStyleSheet = "";
+if (!empty($_COOKIE["theme"]) && $_COOKIE["theme"] == 'dark') {
+  $themeStyleSheet = '<link rel="stylesheet" href="css/darkmode.css">';
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-pt">
@@ -11,6 +15,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/old_browser.css">
+    <?php echo $themeStyleSheet; ?>
     <!-- <script src="javascript/jquery.js"></script>
     <script src="javascript/jquery-ui.js"></script> -->
     <title>Fresh Look</title>
@@ -34,9 +39,10 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                         <li class="link" id="link-3"><a href="#services">Serviços</a></li>
                         <li class="link" id="link-4"><a href="#contact">Contacto</a></li>
                         <li class="link" id="link-5"><a href="#formulario-reserva">Reserva</a></li>
-                        <li id="theme" style="color: #fff; cursor: pointer; background-color: rgb(55,55,55);">Aparencia</li>
+                        <li class="link" id="link-6"><img src="imagens/darkmode-icon.png" alt="darkmode" id="mode"></li>
                     </ul>
                 </div>
+                <!-- <li id="mode" style="color: #fff; cursor: pointer; background-color: rgb(55,55,55); width:20px">Aparencia</li> -->
             </nav>
             <div id="welcome">
                 <div id="welcome-title" class="welcome-item">
@@ -47,9 +53,9 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                 </div>
                 <div id="welcome-text" class="welcome-item">
                     <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Estamos felizes em tê-lo aqui. Fornecemos os melhores serviços de tratamento de
+                        cabelo no mercado. Com os nossos profissionais, que estão sempre a sua disposição,
+                        prometemos deixa-lo com o melhor aspecto possível. Faça já a sua reserva!
                     </p>
                 </div>
                 <div id="welcome-btn" class="welcome-item">
@@ -74,10 +80,11 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                     </div>
                     <div class="about-us-p">
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            A Barbearia <span class="span" style="text-decoration: none;">Fresk Look</span> surgiu em 2002. Graças aos nossos fieis clientes,
+                            estamos já com mais de 20 anos de existência no mercado. Nesse perído, reunimos os melhores
+                            profissionais do mercado! Hoje somos umas das melhores
+                            Barbearias da região Sul de Moçambique e nos esforçamos sempre para fornecer os melhores
+                            serviços e garantir a total satisfação dos nossos Clientes.
                         </p>
                     </div>
                 </div>
@@ -92,17 +99,17 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                 <h2><span class="span">Nossos</span> Serviços</h2>
             </div>
             <div class="services-container">
-                <div id="beard-cut-machine" class="services">
+            <div id="haircut" class="services">
                     <div class="services-img">
-                        <img src="imagens/beard-cut-machine.png" alt="Beard cut">
+                        <img src="imagens/haircut-machine.png" alt="Haircut">
                     </div>
                     <div class="services-title">
-                        <h3>Corte de Barba</h3>
+                        <h3>Corte de Cabelo</h3>
                     </div>
                     <div class="services-p">
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            Jovem ou mais crescido? Sem problemas! Nossos profissionais farão o melhor corte
+                            de cabelo para deixa-lo lindo e atraente!
                         </p>
                     </div>
                 </div>
@@ -111,12 +118,26 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                         <img src="imagens/beard-shaving.png" alt="Beard Shaving">
                     </div>
                     <div class="services-title">
-                        <h3>Corte de Barba a mão</h3>
+                        <h3>Corte de Barba com Navalha</h3>
                     </div>
                     <div class="services-p">
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            Fazemos os melhores cortes com navalha do mercado, usando das mais
+                            refinadas lâminas e dos melhores produtos, fazemos o seu estilo preferido de barba com perfeição!
+                        </p>
+                    </div>
+                </div>
+                <div id="beard-cut" class="services">
+                    <div class="services-img">
+                        <img src="imagens/beard-cut.png" alt="Beard cut">
+                    </div>
+                    <div class="services-title">
+                        <h3>Corte de Barba à máquina</h3>
+                    </div>
+                    <div class="services-p">
+                        <p>
+                            Com os nossos melhores profissionais e máquinas de última geração, a sua barba
+                            estará em boas mãos! Temos diversos estilos, todos ao seu dispor para disfrutar!
                         </p>
                     </div>
                 </div>
@@ -129,22 +150,8 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                     </div>
                     <div class="services-p">
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                        </p>
-                    </div>
-                </div>
-                <div id="haircut" class="services">
-                    <div class="services-img">
-                        <img src="imagens/haircut.png" alt="Haircut">
-                    </div>
-                    <div class="services-title">
-                        <h3>Corte de Cabelo</h3>
-                    </div>
-                    <div class="services-p">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            Oferecemos os melhores serviços de coloração de cabelo existentes no mercado!
+                            Com a nossa experência, deixamos o seu cabelo o mais perfeito possível!
                         </p>
                     </div>
                 </div>
@@ -157,8 +164,8 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                     </div>
                     <div class="services-p">
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            Usando os melhores produtos disponíveis no mercado, deixamos o seu cabelo limpo e em
+                            perfeita aparência, tudo graças ao nossos profissionais!
                         </p>
                     </div>
                 </div>
@@ -171,8 +178,8 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                     </div>
                     <div class="services-p">
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            Hummm, espinhas! Venha ao nosso Salão! Aqui prometemos deixa-lo com um rosto
+                            limpo e macio, usando dos nossos melhores produtos de limpeza facial!
                         </p>
                     </div>
                 </div>
@@ -191,16 +198,16 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                     <div class="coments" id="coment-1">
                         <img class="profile" src="imagens/profile-1.PNG" alt="Perfil">
                         <p class="coment">
-                            " Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. "
+                            " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
+                           Os barbeiros da Barbearia Fresh Look são os melhores "!
                         </p>
                         <p class="client">- Osmane -</p>
                     </div>
                     <div class="coments" id="coment-2">
                         <img class="profile" src="imagens/profile-1.PNG" alt="Perfil">
                         <p class="coment">
-                            " Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. "
+                            " Todo homem que preza pela aparência precisa de um bom barbeiro. Na barbearia
+                            Fresh Look voce encontra os melhores profissionais do mercado! "
                         </p>
                         <p class="client">- Darken -</p>
                     </div>
@@ -320,7 +327,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                     ?>
                     <!-- ---------------FIM CAPTURA E VALIDACAO DE DADOS---------------------->
                     
-                    <form id="formulario-container" method="POST">
+                    <form id="formulario" method="POST" action="#formulario">
                         <div id="left-form" class="form">
                             <label for="nome">Nome<span class="asteristico"> *</span></label>
                             <input type="text" class="form-item" name="nome" id="nome" placeholder="Nome"
@@ -361,7 +368,7 @@ $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
                             <label for="observacoes">Observações (opcional)</label>
                             <textarea class="observacoes" name="observacoes" id="observacoes" cols="30" rows="9"
                                 placeholder="Observações( max. 120 )" maxlength="120"></textarea>
-                            <input type="submit" class="form-item" id="btn-submit" value="Enviar">
+                           <input type="submit" class="form-item" id="btn-submit" value="Enviar">
                         </div>
                     </form>
                 </div>
