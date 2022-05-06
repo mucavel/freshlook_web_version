@@ -4,18 +4,18 @@ function show(){
     document.getElementById('links').classList.toggle('show');
 }
 //DARKMODE
-let imgTheme = document.getElementById("mode").addEventListener("click", ()=>{
-    let modeIcon = document.getElementById("mode");
-    let cookie = document.cookie;
-    if(cookie == "theme=dark"){
-        document.cookie = "theme = light";
-        location.reload();
+let imgTheme = document.getElementById("link-6").addEventListener("click", ()=>{
+    let imgIcon = document.getElementById("mode");
+    let theme = "light";
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        imgIcon.src="imagens/sun.png";
+        theme = "dark";
     }else{
-        document.cookie = "theme = dark";
-        modeIcon.src="/imagens/lightmode.png";
-        location.reload();   
+        imgIcon.src="imagens/moon.png";
     }
-    // location.reload();
+    document.cookie = "theme="+theme;
+    
 })
 //DATEPICKER-BLOQUEAR DATAS PASSADAS
 var datepicker = document.getElementById("dia");
@@ -137,3 +137,11 @@ mostrarPreco();
 //     themes = "dark";
 //     document.cookie = "theme="+themes;
 // })
+    // let modeIcon = document.getElementById("mode");
+    // let cookie = document.cookie;
+    // if(cookie == "theme=dark"){
+    //     document.cookie = "theme = light";
+    // }else{
+    //     document.cookie = "theme = dark";
+    //     modeIcon.src="/imagens/lightmode.png";
+    // }

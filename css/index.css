@@ -2,6 +2,60 @@
     padding: 0;
     margin: 0;
 }
+@font-face{
+    font-family: "Open sans regular";
+    src: url(../fontes/OpenSans-Regular.woff);
+}
+@font-face {
+    font-family: "Great Vibes";
+    src: url(../fontes/GreatVibes-Regular.woff);
+}
+:root{
+    --title-font-family: "Great Vibes", "Times New Roman", arial, serif;
+    --text-font-family: "Open sans regular", arial, sans-serif;
+    --h2-font: "Open sans regular", arial, sans-serif;
+    --h3-font: "Open sans regular", arial, sans-serif;
+    --title-font-size: 26pt;
+    --subtitle-font-size: 18pt;
+    --text-font-size: 14pt;
+
+
+    --body-bg-color: rgb(255, 255, 255);
+    --h1-color: rgb(255,255,255);
+    --h2-color: rgb(0,0,0);
+    --h3-color: rgb(0, 0, 0);
+    --header-white: rgb(255, 255, 255);
+    --p-color: rgb(0,0,0);
+    --services-section-color: rgb(238, 238, 238);
+    --services-bg-color: rgb(255, 255, 255);
+    --coments-section-color: rgb(255, 255, 255);
+    --brown: rgb(124, 126, 14);
+    --brown-hover: rgb(159, 161, 24);
+    --error-red: rgb(241, 33, 33);
+    --footer-bg-color: rgb(0,0,0);
+    --fade-black: rgba(0, 0, 0, 0.6);
+
+
+}
+html{
+    scroll-behavior: smooth;
+}
+.dark-theme{
+    --body-bg-color: rgb(7, 7, 8);
+    --h2-color: rgb(255, 255, 255);
+    --h3-color: rgb(255, 255, 255);
+    --p-color: rgb(255, 255, 255);
+    --services-section-color: rgb(0, 0, 0);
+    --services-bg-color: rgb(19,19,19);
+    --coments-section-color: rgb(7,7,8);
+    --brown: rgb(124, 126, 14);
+    --brown-hover: rgb(159, 161, 24);
+    --error-red: rgb(165, 8, 8);
+    --sucess-green: rgb(6, 167, 19);
+    --fade-black: rgba(0, 0, 0, 0.6);
+}
+/*-------------------------------*/
+
 noscript{
     background-color: rgb(199, 13, 13);
     color: #fff;
@@ -13,18 +67,22 @@ body{
 body p{
     font-family: var(--text-font-family);
     font-size: var(--text-font-size);
+    color: var(--p-color);
 }
 body h1{
     font-family: var(--title-font-family);
+    color: var(--h1-color);
 }
 body h2{
     font-family: var(--h2-font);
     font-size: var(--subtitle-font-size);
     text-transform: uppercase;
+    color: var(--h2-color);
 }
 body h3{
     font-family: var(--h3-font);
     text-transform: uppercase;
+    color: var(--h3-color);
 }
 .span{
     color: var(--brown);
@@ -43,6 +101,10 @@ body h3{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
+}
+#header h2, #header p{
+    color: var(--header-white);
 }
 #header-container{
     width: 100%;
@@ -72,6 +134,9 @@ body h3{
     width: 30px;
     height: 30px;
     margin-left: 20px;
+}
+#links{
+    color: rgb(255, 255, 255);
 }
 #links.show {
     display: block;
@@ -123,7 +188,7 @@ body h3{
 #btn-reservar{
     padding: 15px 35px;
     background-color: var(--brown);
-    color: var(--white);
+    color: rgb(255, 255, 255);
     font-family: var(--text-font-family);
     font-size: 12pt;
     cursor: pointer;
@@ -197,7 +262,7 @@ body h3{
     width: 100%;
     min-height: 95vh;
     position: relative;
-    background-color: var(--grey);
+    background-color: var(--services-section-color);
 }
 #our-services-h2{
     width: 100%;
@@ -221,7 +286,7 @@ body h3{
     width: 30%;
     margin-bottom: 30px;
     min-height: 300px;
-    background-color: var(--white);
+    background-color: var(--services-bg-color);
     border-radius: 5px;
     text-align: center;
     box-shadow: 1px 1px 3px 1px rgb(194, 193, 193);
@@ -248,8 +313,8 @@ body h3{
 /*------------------------------------------------*/
 #coments-clients{
     width: 100%;
-    min-height: 70vh;
-    /* background-color: var(--white); */
+    min-height: 50vh;
+    background-color: var(--coments-section-color);
     position: relative;
 }
 .coments-container{
@@ -272,7 +337,7 @@ body h3{
 }
 #coment-sub{
     text-align: center;
-    padding: 30px 0;
+    padding: 30px 0 0 0;
 }
 .coments{
     background-color: var(--brown); 
@@ -295,14 +360,16 @@ body h3{
     margin: -15% auto 0 auto;
 }
 .coment, .client{
-    color: var(--white);
+    /* color: var(--white); */
     text-align: center;
 }
 .client{
     font-weight: bold;
+    color: #fff;
 }
 .coment{
     padding: 20px;
+    color: #fff;
 }
 
 /*------------------------------------------------*/
@@ -354,7 +421,7 @@ body h3{
     color: var(--brown);
 }
 #address p{
-    color: var(--white);
+    color: rgb(255, 255, 255);
 }
 
 /*------------------------------------------------*/
@@ -368,10 +435,10 @@ body h3{
 #erro-reserva,#erro-numero,#erro-nome,
 #erro-idade,#erro-corte,#erro-dia,
 #erro-hora{
-    background-color: rgb(241, 33, 33);
+    background-color: var(--error-red);
 }
 #sucesso-reserva{
-    background-color: rgb(6, 167, 19);
+    background-color: var(--sucess-green);
 }
 #formulario-reserva{
     width: 100%;
@@ -479,7 +546,7 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 #footer, .footer-container{
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--footer-bg-color);
 }
 .footer-container{
     display: flex;
@@ -510,7 +577,7 @@ input[type="date"]::-webkit-inner-spin-button {
     padding: 20px 0;
 }
 #developer p{
-    color: var(--white);
+    color: rgb(255, 255, 255);
 }
 #author{
     color: var(--brown);
@@ -737,8 +804,11 @@ input[type="date"]::-webkit-inner-spin-button {
 .coments-container, .coments-slider, .coments{
     width: 85%;
 }
-#coment-2{
+/* #coment-2{
     display: none;
+} */
+#coment-sub{
+    padding: 0;
 }
 #contact{
     display: flex;

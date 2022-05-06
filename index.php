@@ -1,11 +1,9 @@
 <?php
 require_once 'booking.php';
 $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
-$themeStyleSheet = "";
-if (!empty($_COOKIE["theme"]) && $_COOKIE["theme"] == 'dark') {
-  $themeStyleSheet = '<link rel="stylesheet" href="css/darkmode.css">';
-}else if(!empty($_COOKIE["theme"]) && $_COOKIE["theme"] == 'light'){
-    $themeStyleSheet = "";
+$themeClass = '';
+if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
+  $themeClass = 'dark-theme';
 }
 ?>
 <!DOCTYPE html>
@@ -15,16 +13,16 @@ if (!empty($_COOKIE["theme"]) && $_COOKIE["theme"] == 'dark') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
     <link rel="icon" href="imagens/icon.png">
-    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/old_browser.css">
-    <?php echo $themeStyleSheet; ?>
+</script>
+    <!-- <link rel="stylesheet" href="css/global.css"> -->
+    <!-- <link rel="stylesheet" href="css/old_browser.css"> -->
     <!-- <script src="javascript/jquery.js"></script>
     <script src="javascript/jquery-ui.js"></script> -->
     <title>Fresh Look</title>
 </head>
 <noscript>Seu navegador não suporta Javascript, algumas funções deixarão de funcionar. Abilite-o ou mude para um compatível.</noscript>
-<body>
+<body class="<?php echo $themeClass; ?>">
     <!------------------------------------------------------------------->
     <!--------------------------------CABECALHO-------------------------->
     <!------------------------------------------------------------------->
@@ -42,7 +40,7 @@ if (!empty($_COOKIE["theme"]) && $_COOKIE["theme"] == 'dark') {
                         <li class="link" id="link-3"><a href="#services">Serviços</a></li>
                         <li class="link" id="link-4"><a href="#contact">Contacto</a></li>
                         <li class="link" id="link-5"><a href="#formulario-reserva">Reserva</a></li>
-                        <li class="link" id="link-6"><img src="imagens/darkmode-icon.png" alt="darkmode" id="mode"></li>
+                        <li class="link" id="link-6"><img src="imagens/moon.png" alt="darkmode" id="mode"></li>
                     </ul>
                 </div>
                 <!-- <li id="mode" style="color: #fff; cursor: pointer; background-color: rgb(55,55,55); width:20px">Aparencia</li> -->
