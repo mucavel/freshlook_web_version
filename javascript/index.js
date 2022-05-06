@@ -5,8 +5,17 @@ function show(){
 }
 //DARKMODE
 let imgTheme = document.getElementById("mode").addEventListener("click", ()=>{
-    document.cookie = "theme = dark";
-    location.reload();
+    let modeIcon = document.getElementById("mode");
+    let cookie = document.cookie;
+    if(cookie == "theme=dark"){
+        document.cookie = "theme = light";
+        location.reload();
+    }else{
+        document.cookie = "theme = dark";
+        modeIcon.src="/imagens/lightmode.png";
+        location.reload();   
+    }
+    // location.reload();
 })
 //DATEPICKER-BLOQUEAR DATAS PASSADAS
 var datepicker = document.getElementById("dia");
