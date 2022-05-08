@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
@@ -11,6 +14,7 @@
     src: url(../fontes/GreatVibes-Regular.woff);
 }
 :root{
+    /*----------FONTS-------------*/
     --title-font-family: "Great Vibes", "Times New Roman", arial, serif;
     --text-font-family: "Open sans regular", arial, sans-serif;
     --h2-font: "Open sans regular", arial, sans-serif;
@@ -18,27 +22,25 @@
     --title-font-size: 26pt;
     --subtitle-font-size: 18pt;
     --text-font-size: 14pt;
-
-
+    /* -----------COLORS--------------*/
+    --header-white: rgb(255, 255, 255);
     --body-bg-color: rgb(255, 255, 255);
     --h1-color: rgb(255,255,255);
     --h2-color: rgb(0,0,0);
     --h3-color: rgb(0, 0, 0);
-    --header-white: rgb(255, 255, 255);
     --p-color: rgb(0,0,0);
     --services-section-color: rgb(238, 238, 238);
     --services-bg-color: rgb(255, 255, 255);
+    --services-box-shadow: rgb(194, 193, 193);
     --coments-section-color: rgb(255, 255, 255);
     --brown: rgb(124, 126, 14);
     --brown-hover: rgb(159, 161, 24);
     --error-red: rgb(241, 33, 33);
+    --sucess-green: rgb(6, 167, 19);
     --footer-bg-color: rgb(0,0,0);
     --fade-black: rgba(0, 0, 0, 0.6);
 
 
-}
-html{
-    scroll-behavior: smooth;
 }
 .dark-theme{
     --body-bg-color: rgb(7, 7, 8);
@@ -47,11 +49,12 @@ html{
     --p-color: rgb(255, 255, 255);
     --services-section-color: rgb(0, 0, 0);
     --services-bg-color: rgb(19,19,19);
+    --services-box-shadow: rgb(0, 0, 0);
     --coments-section-color: rgb(7,7,8);
     --brown: rgb(124, 126, 14);
     --brown-hover: rgb(159, 161, 24);
     --error-red: rgb(165, 8, 8);
-    --sucess-green: rgb(6, 167, 19);
+    --sucess-green: rgb(1, 105, 10);
     --fade-black: rgba(0, 0, 0, 0.6);
 }
 /*-------------------------------*/
@@ -101,7 +104,6 @@ body h3{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 #header h2, #header p{
     color: var(--header-white);
@@ -134,6 +136,10 @@ body h3{
     width: 30px;
     height: 30px;
     margin-left: 20px;
+    cursor: pointer;
+}
+.mode1{
+    display: none;
 }
 #links{
     color: rgb(255, 255, 255);
@@ -213,9 +219,8 @@ body h3{
     margin: 20px auto;
     display: flex;
     flex-direction: row;
-    /* background-color: var(--white); */
     border-radius: 10px;
-    box-shadow: 1px 1px 3px 1px grey;
+    box-shadow: 1px 1px 3px 1px var(--services-box-shadow);
 }
 .about-h2{
     text-align: center;
@@ -227,7 +232,7 @@ body h3{
     border-radius: 10px;
 }
 #about-text{
-    /* background-color: var(--white); */
+    background-color: var(--services-bg-color);
     border-radius: 10px;
     position: relative;
 }
@@ -254,7 +259,6 @@ body h3{
     background-image: url(../imagens/form-bg.jpg);
     background-size: cover;
 }
-
 /*------------------------------------------------*/
 /*---------------------NOSSOS SERVICOS------------*/
 /*------------------------------------------------*/
@@ -289,7 +293,7 @@ body h3{
     background-color: var(--services-bg-color);
     border-radius: 5px;
     text-align: center;
-    box-shadow: 1px 1px 3px 1px rgb(194, 193, 193);
+    box-shadow: 1px 1px 3px 1px var(--services-box-shadow);
 }
 .services-img img{
     padding: 20px 0 0 0;
@@ -360,7 +364,6 @@ body h3{
     margin: -15% auto 0 auto;
 }
 .coment, .client{
-    /* color: var(--white); */
     text-align: center;
 }
 .client{
@@ -371,7 +374,6 @@ body h3{
     padding: 20px;
     color: #fff;
 }
-
 /*------------------------------------------------*/
 /*-----------------------CONTACTO-----------------*/
 /*------------------------------------------------*/
@@ -423,7 +425,6 @@ body h3{
 #address p{
     color: rgb(255, 255, 255);
 }
-
 /*------------------------------------------------*/
 /*---------------------FORMULARIO RESERVA----------*/
 /*------------------------------------------------*/
@@ -436,9 +437,11 @@ body h3{
 #erro-idade,#erro-corte,#erro-dia,
 #erro-hora{
     background-color: var(--error-red);
+    color: rgb(255, 255, 255);
 }
 #sucesso-reserva{
     background-color: var(--sucess-green);
+    color: rgb(255, 255, 255);
 }
 #formulario-reserva{
     width: 100%;
@@ -465,9 +468,6 @@ body h3{
    display: flex;
    flex-direction: row;
 }
-/* .formulario-h2{
-    background-color: var(--white);
-} */
 #form-h2{
     text-align: center;
     padding: 50px 0;
@@ -480,7 +480,7 @@ body h3{
     width: 50%;
 }
 .form label{
-    color: #fff;
+    color: rgb(255, 255, 255);
     margin-left: 10%;
     padding: 10px 0 10px 0;
     font-family: var(--text-font-family);
@@ -502,12 +502,12 @@ input, #preco{
 #preco{
     text-align: center;
     line-height: 40px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
 }
 #valor, #preco{
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     font-family: var(--text-font-family);
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 select{
     width: 83%;
@@ -527,7 +527,6 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 #btn-submit{
     background-color: var(--brown);
-    /* background-color: rgb(74, 75, 5); */
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -570,7 +569,6 @@ input[type="date"]::-webkit-inner-spin-button {
     width: 40px;
     height: 40px;
     margin: 0 20px;
-    
 }
 #developer{
     text-align: center;
@@ -582,17 +580,31 @@ input[type="date"]::-webkit-inner-spin-button {
 #author{
     color: var(--brown);
 }
-
 /*------------------------------------------------*/
 /*---------------------@MEDIA---------------------*/
 /*------------------------------------------------*/
 @media screen and (max-width: 360px){
     #links ul{
-        border-radius: 20px;
-        
+        border-radius: 20px;   
     }
     #welcome-btn{
         padding: 0 0 40px 0;
+    }
+}
+@media screen and (min-width: 572px) and (max-width: 615px){ 
+    .mode1{
+        display: block;
+        width: 33px;
+        height: 33px;
+    }
+    #link-6{
+        display: none;
+    }
+    .menu{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 571px){
@@ -617,6 +629,15 @@ input[type="date"]::-webkit-inner-spin-button {
         height: 40px;
         padding: 10px 0;
         margin-right: 20px;
+    }
+    .mode1{
+        width: 33px;
+        height: 33px;
+        margin: 14px 10px 0 0;
+        display: block;
+    }
+    #link-6{
+        display: none;
     }
     #links{
 	    position: absolute;
@@ -652,17 +673,17 @@ input[type="date"]::-webkit-inner-spin-button {
 /*------------------------------------------------*/
 /*---------------------ACERCA DE NOS--------------*/
 /*------------------------------------------------*/
-#about-us-container{
-    width: 100%;
-    flex-direction: column;
-}
-.about{
-    width: 100%;
-}
-#about-img{
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
+    #about-us-container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .about{
+        width: 100%;
+    }
+    #about-img{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
 /*------------------------------------------------*/
 /*---------------------NOSSOS SERVICOS------------*/
 /*------------------------------------------------*/
@@ -739,9 +760,7 @@ input[type="date"]::-webkit-inner-spin-button {
 
 }
 /*---------------------------MEDIA 572 - 768-----------------------*/
-
 @media screen and (min-width: 572px) and (max-width: 768px){
-
 #navbar{
     display: flex;
     flex-direction: column;
@@ -804,9 +823,9 @@ input[type="date"]::-webkit-inner-spin-button {
 .coments-container, .coments-slider, .coments{
     width: 85%;
 }
-/* #coment-2{
+#coment-2{
     display: none;
-} */
+}
 #coment-sub{
     padding: 0;
 }

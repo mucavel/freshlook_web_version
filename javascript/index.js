@@ -17,6 +17,19 @@ let imgTheme = document.getElementById("link-6").addEventListener("click", ()=>{
     document.cookie = "theme="+theme;
     
 })
+let imgTheme_1 = document.getElementsByClassName("mode1")[0].addEventListener("click", ()=>{
+    let imgIcon_1 = document.getElementById("mode_1");
+    let theme = "light";
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        imgIcon_1.src="imagens/sun.png";
+        theme = "dark";
+    }else{
+        imgIcon_1.src="imagens/moon.png";
+    }
+    document.cookie = "theme="+theme;
+    
+})
 //DATEPICKER-BLOQUEAR DATAS PASSADAS
 var datepicker = document.getElementById("dia");
 datepicker.min = new Date().toISOString().split("T")[0];

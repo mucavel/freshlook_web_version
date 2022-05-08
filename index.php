@@ -3,7 +3,7 @@ require_once 'booking.php';
 $booking = new Booking("freshlookdb", "127.0.0.1", "root", "");
 $themeClass = '';
 if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
-  $themeClass = 'dark-theme';
+  $themeClass = 'class=dark-theme';
 }
 ?>
 <!DOCTYPE html>
@@ -11,18 +11,16 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" >
     <link rel="icon" href="imagens/icon.png">
     <link rel="stylesheet" href="css/index.css">
-</script>
-    <!-- <link rel="stylesheet" href="css/global.css"> -->
     <!-- <link rel="stylesheet" href="css/old_browser.css"> -->
     <!-- <script src="javascript/jquery.js"></script>
     <script src="javascript/jquery-ui.js"></script> -->
     <title>Fresh Look</title>
 </head>
 <noscript>Seu navegador não suporta Javascript, algumas funções deixarão de funcionar. Abilite-o ou mude para um compatível.</noscript>
-<body class="<?php echo $themeClass; ?>">
+<body <?php echo $themeClass; ?>>
     <!------------------------------------------------------------------->
     <!--------------------------------CABECALHO-------------------------->
     <!------------------------------------------------------------------->
@@ -31,7 +29,10 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <nav id="navbar">
                 <div id="logo">
                     <h1>Fresh Look</h1>
-                    <img id="bars" class="bars" src="imagens/bars.png" alt="Bars">
+                    <div class="menu" style="display:flex;flex-direction: row; ">
+                        <img src="imagens/moon.png" alt="darkmode" id="mode_1" class="mode1">
+                        <img id="bars" class="bars" src="imagens/bars.png" alt="Bars">
+                    </div>
                 </div>
                 <div id="links">
                     <ul id="list">
@@ -41,9 +42,19 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                         <li class="link" id="link-4"><a href="#contact">Contacto</a></li>
                         <li class="link" id="link-5"><a href="#formulario-reserva">Reserva</a></li>
                         <li class="link" id="link-6"><img src="imagens/moon.png" alt="darkmode" id="mode"></li>
+                        <script>
+                            let imgIcon = document.getElementById("mode");
+                            let imgIcon_1 = document.getElementById("mode_1");
+                            if(document.body.classList.contains("dark-theme")){
+                                imgIcon.src="imagens/sun.png";
+                                imgIcon_1.src="imagens/sun.png";
+                            }else{
+                                imgIcon.src="imagens/moon.png";
+                                imgIcon_1.src="imagens/moon.png";
+                            }
+                        </script>
                     </ul>
                 </div>
-                <!-- <li id="mode" style="color: #fff; cursor: pointer; background-color: rgb(55,55,55); width:20px">Aparencia</li> -->
             </nav>
             <div id="welcome">
                 <div id="welcome-title" class="welcome-item">
@@ -225,7 +236,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             </div>
             <div id="contact-container">
                 <div id="map-container" class="contact-item">
-                    <iframe id="map"
+                    <iframe title="fresh-look-map" id="map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7174.16903118695!2d32.59159693472878!3d-25.965268422142803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee69bcf78b5b04f%3A0x397b498c151fc907!2sGentleman&#39;s%20Barber%20Shop!5e0!3m2!1spt-PT!2smz!4v1647895107018!5m2!1spt-PT!2smz"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
@@ -354,7 +365,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                             <div id="preco" class="preco"><span id="valor" class="valor"></span> </div>
                         </div>
                         <div id="right-form" class="form">
-                            <label for="data">Data<span class="asteristico"> *</span></label>
+                            <label for="dia">Data<span class="asteristico"> *</span></label>
                             <input type="date" class="form-item" name="dia" id="dia" required>
                         <?php
                             $selectHora = "<label for='hora'>Hora<span class='asteristico'> *</span></label>
