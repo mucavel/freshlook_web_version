@@ -9,10 +9,10 @@ let imgTheme = document.getElementById("link-6").addEventListener("click", ()=>{
     let theme = "light";
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
-        imgIcon.src="imagens/sun.png";
+        imgIcon.src="imagens/sun.webp";
         theme = "dark";
     }else{
-        imgIcon.src="imagens/moon.png";
+        imgIcon.src="imagens/moon.webp";
     }
     document.cookie = "theme="+theme;
     
@@ -22,10 +22,10 @@ let imgTheme_1 = document.getElementsByClassName("mode1")[0].addEventListener("c
     let theme = "light";
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
-        imgIcon_1.src="imagens/sun.png";
+        imgIcon_1.src="imagens/sun.webp";
         theme = "dark";
     }else{
-        imgIcon_1.src="imagens/moon.png";
+        imgIcon_1.src="imagens/moon.webp";
     }
     document.cookie = "theme="+theme;
     
@@ -126,35 +126,3 @@ mostrarPreco();
 // }
 // data_futura = yyyy + '-' + mm + '-' + dd;
 // datepicker.setAttribute("max", data_futura);
-
-//DARKMODE
-// let theme = document.getElementById("theme").addEventListener("click", ()=>{
-//     // let head = document.getElementsByTagName('HEAD')[0]; 
-//     // let link = document.createElement('link');
-//     // link.rel = 'stylesheet'; 
-//     // link.type = 'text/css';
-//     // link.href = 'css/darkmode.css'; 
-//     // head.appendChild(link);
-//     let fadeHeader = document.getElementById("header-container").style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-//     let body = document.getElementsByTagName("body")[0].classList.toggle("bodyDark");
-//     let aboutContainer = document.getElementById("about-us-container");
-//     let aboutTxt = document.getElementById("about-text").classList.toggle("about-text");
-//     let paragraph = document.querySelector("body").classList.toggle("bodyP");
-//     let servicesSect = document.getElementById("services").style.backgroundColor = "rgb(0, 0, 0)";
-//     for(let i = 0; i<=5; i++){
-//         let servicesCont = document.getElementsByClassName("services")[i].style.backgroundColor = "rgb(19, 19, 19)";
-//     }
-//     let comentsClient = document.getElementById("coments-clients").style.backgroundColor = "rgb(7, 7, 8)";
-//     let contactH2 = document.getElementsByClassName("contact-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
-//     let formH2 = document.getElementsByClassName("formulario-h2")[0].style.backgroundColor= "rgb(0, 0, 0)";
-//     themes = "dark";
-//     document.cookie = "theme="+themes;
-// })
-    // let modeIcon = document.getElementById("mode");
-    // let cookie = document.cookie;
-    // if(cookie == "theme=dark"){
-    //     document.cookie = "theme = light";
-    // }else{
-    //     document.cookie = "theme = dark";
-    //     modeIcon.src="/imagens/lightmode.png";
-    // }

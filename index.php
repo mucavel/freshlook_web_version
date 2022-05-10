@@ -11,8 +11,8 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" >
-    <link rel="icon" href="imagens/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+    <link rel="icon" href="imagens/favicon.webp">
     <link rel="stylesheet" href="css/index.css">
     <!-- <link rel="stylesheet" href="css/old_browser.css"> -->
     <!-- <script src="javascript/jquery.js"></script>
@@ -30,8 +30,8 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 <div id="logo">
                     <h1>Fresh Look</h1>
                     <div class="menu" style="display:flex;flex-direction: row; ">
-                        <img src="imagens/moon.png" alt="darkmode" id="mode_1" class="mode1">
-                        <img id="bars" class="bars" src="imagens/bars.png" alt="Bars">
+                        <img src="imagens/moon.webp" alt="darkmode" id="mode_1" class="mode1">
+                        <img id="bars" class="bars" src="imagens/bars.webp" alt="Bars">
                     </div>
                 </div>
                 <div id="links">
@@ -41,16 +41,16 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                         <li class="link" id="link-3"><a href="#services">Serviços</a></li>
                         <li class="link" id="link-4"><a href="#contact">Contacto</a></li>
                         <li class="link" id="link-5"><a href="#formulario-reserva">Reserva</a></li>
-                        <li class="link" id="link-6"><img src="imagens/moon.png" alt="darkmode" id="mode"></li>
+                        <li class="link" id="link-6"><img src="imagens/moon.webp" alt="darkmode" id="mode"></li>
                         <script>
                             let imgIcon = document.getElementById("mode");
                             let imgIcon_1 = document.getElementById("mode_1");
                             if(document.body.classList.contains("dark-theme")){
-                                imgIcon.src="imagens/sun.png";
-                                imgIcon_1.src="imagens/sun.png";
+                                imgIcon.src="imagens/sun.webp";
+                                imgIcon_1.src="imagens/sun.webp";
                             }else{
-                                imgIcon.src="imagens/moon.png";
-                                imgIcon_1.src="imagens/moon.png";
+                                imgIcon.src="imagens/moon.webp";
+                                imgIcon_1.src="imagens/moon.webp";
                             }
                         </script>
                     </ul>
@@ -66,8 +66,8 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 <div id="welcome-text" class="welcome-item">
                     <p>
                         Estamos felizes em tê-lo aqui. Fornecemos os melhores serviços de tratamento de
-                        cabelo no mercado. Com os nossos profissionais, que estão sempre a sua disposição,
-                        prometemos deixa-lo com o melhor aspecto possível. Faça já a sua reserva!
+                        cabelo no mercado. Com os nossos profissionais,prometemos deixa-lo com o 
+                        melhor aspecto possível. Faça já a sua reserva!
                     </p>
                 </div>
                 <div id="welcome-btn" class="welcome-item">
@@ -113,7 +113,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <div class="services-container">
             <div id="haircut" class="services">
                     <div class="services-img">
-                        <img src="imagens/haircut-machine.png" alt="Haircut">
+                        <img src="imagens/haircut-machine.webp" alt="Haircut">
                     </div>
                     <div class="services-title">
                         <h3>Corte de Cabelo</h3>
@@ -127,7 +127,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 </div>
                 <div id="beard-shaving" class="services">
                     <div class="services-img">
-                        <img src="imagens/beard-shaving.png" alt="Beard Shaving">
+                        <img src="imagens/beard-shaving.webp" alt="Beard Shaving">
                     </div>
                     <div class="services-title">
                         <h3>Corte de Barba com Navalha</h3>
@@ -141,7 +141,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 </div>
                 <div id="beard-cut" class="services">
                     <div class="services-img">
-                        <img src="imagens/beard-cut.png" alt="Beard cut">
+                        <img src="imagens/beard-cut.webp" alt="Beard cut">
                     </div>
                     <div class="services-title">
                         <h3>Corte de Barba à máquina</h3>
@@ -155,7 +155,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 </div>
                 <div id="hair-coloring" class="services">
                     <div class="services-img">
-                        <img src="imagens/hair-coloring.png" alt="Hair coloring">
+                        <img src="imagens/hair-coloring.webp" alt="Hair coloring">
                     </div>
                     <div class="services-title">
                         <h3>Coloração de Cabelo</h3>
@@ -169,7 +169,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 </div>
                 <div id="hair-treat" class="services">
                     <div class="services-img">
-                        <img src="imagens/hai-treat.png" alt="Hair treat">
+                        <img src="imagens/hair-treat.webp" alt="Hair treat">
                     </div>
                     <div class="services-title">
                         <h3>Tratamento de Cabelo</h3>
@@ -183,7 +183,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 </div>
                 <div id="facemasking" class="services">
                     <div class="services-img">
-                        <img src="imagens/face-masking.png" alt="Face masking">
+                        <img src="imagens/face-masking.webp" alt="Face masking">
                     </div>
                     <div class="services-title">
                         <h3>Máscara Facial</h3>
@@ -205,10 +205,10 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 <h2 id="coment-sub">Comentários dos <span class="span">nossos Clientes</span></h2>
             </div>
             <div class="coments-container">
-                <img class="arrow" src="imagens/seta-reverse.png" alt="seta">
+                <img class="arrow" src="imagens/seta-reverse.webp" alt="seta">
                 <div class="coments-slider">
                     <div class="coments" id="coment-1">
-                        <img class="profile" src="imagens/profile-1.PNG" alt="Perfil">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
                         <p class="coment">
                             " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
                            Os barbeiros da Barbearia Fresh Look são os melhores "!
@@ -216,7 +216,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                         <p class="client">- Osmane -</p>
                     </div>
                     <div class="coments" id="coment-2">
-                        <img class="profile" src="imagens/profile-1.PNG" alt="Perfil">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
                         <p class="coment">
                             " Todo homem que preza pela aparência precisa de um bom barbeiro. Na barbearia
                             Fresh Look voce encontra os melhores profissionais do mercado! "
@@ -224,7 +224,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                         <p class="client">- Darken -</p>
                     </div>
                 </div>
-                <img class="arrow" src="imagens/seta.png" alt="seta">
+                <img class="arrow" src="imagens/seta.webp" alt="seta">
             </div>
         </section>
         <!------------------------------------------------------------------->
@@ -244,7 +244,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                     <div class="fader-contact">
                         <h3>Nosso endereço</h3>
                         <p>Avenida Mao Tse Tung, Nº 412, Maputo</p>
-                        <p style="color: #fff">Telefone: (+258) 845509796</p>
+                        <p><span style="color: #fff">Telefone: (+258) 845509796</span></p>
                         <h3>Horários</h3>
                         <p>Segunda à Sexta-feira</p>
                         <p>Das 08:00 às 21:30</p>
@@ -339,7 +339,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                     ?>
                     <!-- ---------------FIM CAPTURA E VALIDACAO DE DADOS---------------------->
                     
-                    <form id="formulario" method="POST" action="#formulario">
+                    <form id="formulario" method="POST" action="#formulario-reserva">
                         <div id="left-form" class="form">
                             <label for="nome">Nome<span class="asteristico"> *</span></label>
                             <input type="text" class="form-item" name="nome" id="nome" placeholder="Nome"
@@ -396,10 +396,10 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 <h1>Fresh Look</h1>
             </div>
             <div class="footer-item" id="social-media">
-                <a href="#"><img src="imagens/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="imagens/whatsapp-icon.png" alt="Whatsapp"></a>
-                <a href="#"><img src="imagens/instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="imagens/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="imagens/facebook-icon.webp" alt="Facebook"></a>
+                <a href="#"><img src="imagens/whatsapp-icon.webp" alt="Whatsapp"></a>
+                <a href="#"><img src="imagens/instagram-icon.webp" alt="Instagram"></a>
+                <a href="#"><img src="imagens/twitter-icon.webp" alt="Twitter"></a>
             </div>
         </div>
         <div id="developer">

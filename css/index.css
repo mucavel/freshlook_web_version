@@ -100,7 +100,7 @@ body h3{
 #header{
     width: 100%;
     min-height: 100vh;
-    background-image: url(../imagens/header-bg.jpg);
+    background: url(../imagens/header-bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -256,7 +256,7 @@ body h3{
     text-transform: unset;
 }
 #about-img{
-    background-image: url(../imagens/form-bg.jpg);
+    background: url(../imagens/form-bg.webp);
     background-size: cover;
 }
 /*------------------------------------------------*/
@@ -404,7 +404,7 @@ body h3{
 }
 #address{
     width: 40%;
-    background-image: url(../imagens/front-barber-shop.PNG);
+    background: url(../imagens/front-barber-shop.webp);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -450,7 +450,7 @@ body h3{
     position: relative;
 }
 .formulario-reserva-container{
-    background-image: url(../imagens/form-bg.jpg);
+    background: url(../imagens/form-bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -589,6 +589,10 @@ input[type="date"]::-webkit-inner-spin-button {
     }
     #welcome-btn{
         padding: 0 0 40px 0;
+    }
+    .menu{
+        display: flex;
+        flex-direction: row;
     }
 }
 @media screen and (min-width: 572px) and (max-width: 640px){ 
