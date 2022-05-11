@@ -499,6 +499,9 @@ input, #preco{
     height: 40px;
     padding: 0 0 0 8px;
 }
+input[type="date"]{
+    width: 80%;
+}
 #preco{
     text-align: center;
     line-height: 40px;
@@ -519,11 +522,6 @@ textarea{
     margin-bottom: 15px;
     padding: 5px 0 0 8px;
     resize: none;
-}
-input[type="date"]::-webkit-inner-spin-button {
-    display: none;
-    width: 80%;
-    -webkit-appearance: none;
 }
 #btn-submit{
     background-color: var(--brown);

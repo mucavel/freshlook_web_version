@@ -11,6 +11,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Página de agendamento da Barbearia Fresk Look">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
     <link rel="icon" href="imagens/favicon.webp">
     <link rel="stylesheet" href="css/index.css">
@@ -65,9 +66,8 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                 </div>
                 <div id="welcome-text" class="welcome-item">
                     <p>
-                        Estamos felizes em tê-lo aqui. Fornecemos os melhores serviços de tratamento de
-                        cabelo no mercado. Com os nossos profissionais,prometemos deixa-lo com o 
-                        melhor aspecto possível. Faça já a sua reserva!
+                        Estamos felizes em tê-lo aqui. Esta pronto para renovar seu looK?. 
+                        Então, faça já a sua reserva!
                     </p>
                 </div>
                 <div id="welcome-btn" class="welcome-item">
