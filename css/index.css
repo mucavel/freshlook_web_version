@@ -8,10 +8,12 @@ html{
 @font-face{
     font-family: "Open sans regular";
     src: url(../fontes/OpenSans-Regular.woff);
+    font-display: swap;
 }
 @font-face {
     font-family: "Great Vibes";
     src: url(../fontes/GreatVibes-Regular.woff);
+    font-display: swap;
 }
 :root{
     /*----------FONTS-------------*/
