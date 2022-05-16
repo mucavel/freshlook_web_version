@@ -323,21 +323,6 @@ body h3{
     background-color: var(--coments-section-color);
     position: relative;
 }
-.coments-container{
-    width: 80%;
-    min-height: 500px;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    justify-content: space-around;
-    position: relative;
-}
-.coments-slider{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    position: relative;
-}
 .coment-h2{
     width: 100%;
 }
@@ -351,12 +336,6 @@ body h3{
     min-height: 260px;
     margin: auto auto;
     border-radius: 10px;
-}
-.arrow{
-    width: 50px;
-    height: 50px;
-    display: block;
-    margin: auto auto;
 }
 .profile{
     width: 140px;
@@ -376,6 +355,48 @@ body h3{
     padding: 20px;
     color: #fff;
 }
+.slider {
+    position: relative;
+    width: 80%;
+    min-height: 60vh;
+    overflow: hidden;
+    border-radius: 5px;
+    margin: auto;
+  }
+.coment-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transform: translateX( 100% );
+    animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+  }
+  
+  
+.coment-slide.coment_part-two {
+    z-index: 6;
+    animation-delay: 7s;
+  }
+  
+.coment-slide.coment_part-three {
+    z-index: 5;
+    animation-delay: 14s;
+  }
+.coment-slide.coment_part-four {
+    z-index: 4;
+    animation-delay: 21s;
+  } 
+
+@keyframes opaqTransition {
+    3% { transform: translateX( 0 ); }
+    25% { transform: translateX( 0 ); }
+    28% { transform: translateX( -100% ); }
+    100% { transform: translateX( -100% ); }
+  }
 /*------------------------------------------------*/
 /*-----------------------CONTACTO-----------------*/
 /*------------------------------------------------*/
@@ -584,110 +605,113 @@ textarea{
 /*---------------------@MEDIA---------------------*/
 /*------------------------------------------------*/
 @media screen and (max-width: 360px){
-    #links ul{
+#links ul{
         border-radius: 20px;   
-    }
-    #welcome-btn{
+}
+#welcome-btn{
         padding: 0 0 40px 0;
-    }
-    .menu{
+}
+.menu{
         display: flex;
         flex-direction: row;
-    }
+}
+#coments-clients, .slider{
+    min-height: 80vh;
+}
 }
 @media screen and (min-width: 572px) and (max-width: 640px){ 
-    .mode1{
+.mode1{
         display: block;
         width: 33px;
         height: 33px;
-    }
-    #link-6{
+}
+#link-6{
         display: none;
-    }
-    .menu{
+}
+.menu{
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: center;
-    }
+}
 }
 @media screen and (max-width: 571px){
-    #navbar{
+#navbar{
         width: 100%;
         flex-direction: column;
-    }
-    #logo, #links{
+}
+#logo, #links{
        width: 100%;
-    }
-    #logo{
+}
+#logo{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-    #logo h1{
+}
+#logo h1{
         font-size: 30pt;
-    }
-    #bars{
+}
+#bars{
         display: block;
         width: 40px;
         height: 40px;
         padding: 10px 0;
         margin-right: 20px;
-    }
-    .mode1{
+}
+.mode1{
         width: 33px;
         height: 33px;
         margin: 14px 10px 0 0;
         display: block;
-    }
-    #link-6{
+}
+#link-6{
         display: none;
-    }
-    #links{
+}
+#links{
 	    position: absolute;
 	    top: 4.5rem;
         display: none;
-    }
-    #links ul{
+}
+#links ul{
         flex-direction: column;
         padding: 0;
         width: 100%;
         background-color: var(--brown);
         height: 100%;
         border-radius: 20px;
-    }
-    #links ul li{
+}
+#links ul li{
         padding: 15px 0;
         width: 100%;
         text-align: center;
-    }
-    #links ul li a{
+}
+#links ul li a{
         width: 100%;
-    }
-    #links ul li:hover{
+}
+#links ul li:hover{
         background-color: var(--brown);
-    }
-    #welcome{
+}
+#welcome{
         width: 90%;
         margin-top: 20%;
-    }
-    #welcome-btn{
+}
+#welcome-btn{
         padding: 0 0 40px 0;
-    }
+}
 /*------------------------------------------------*/
 /*---------------------ACERCA DE NOS--------------*/
 /*------------------------------------------------*/
-    #about-us-container{
+#about-us-container{
         width: 100%;
         flex-direction: column;
-    }
-    .about{
+}
+.about{
         width: 100%;
-    }
-    #about-img{
+}
+#about-img{
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-    }
+}
 /*------------------------------------------------*/
 /*---------------------NOSSOS SERVICOS------------*/
 /*------------------------------------------------*/
@@ -710,10 +734,13 @@ textarea{
 /*------------------------------------------------*/
 /*---------------------COMENTS------------*/
 /*------------------------------------------------*/
-.coments-container, .coments-slider, .coments{
+.coments{
     width: 100%;
 }
-#coment-2{
+#coment-2,
+#coment-4,
+#coment-6,
+#coment-8{
     display: none;
 }
 .client{
@@ -819,20 +846,26 @@ textarea{
     padding: 0 20px 20px 20px;
 }
 /*------------------------------------------------*/
-/*-------------------------CONTACTO---------------*/
+/*-------------------------COMENTS---------------*/
 /*------------------------------------------------*/
-#coments-clients{
-    min-height: 40vh;
+#coments-clients, .slider{
+    min-height: 50vh;
 }
-.coments-container, .coments-slider, .coments{
+.coments{
     width: 85%;
 }
-#coment-2{
+#coment-2,
+#coment-4,
+#coment-6,
+#coment-8{
     display: none;
 }
 #coment-sub{
     padding: 0;
 }
+/*------------------------------------------------*/
+/*-------------------------CONTACTO---------------*/
+/*------------------------------------------------*/
 #contact{
     display: flex;
     flex-direction: column;
@@ -891,12 +924,12 @@ textarea{
         width: 95%
     }
 /*---------------------coments--------------------*/
-#coments-clients{
+#coments-clients, .slider{
     width: 100%;
-    min-height: 45vh;
+    min-height: 40vh;
 }
-.coments-container{
-    width: 95%;
+.coment-slide{
+    min-height: 100%;
 }
 .coments{
     width: 45%;
@@ -908,7 +941,6 @@ textarea{
 #contact, #contact-container{
     min-height: 40vh;
 }
-
 /*---------------------FORMULARIO RESERVA------------*/
 #formulario-reserva{
     height: 40vh;
@@ -917,7 +949,6 @@ textarea{
     width: 80%;
     flex-direction: row;
 }
-
 /*-------------------------RODAPE-----------------------*/
 .footer-item{
     line-height: 80px;
@@ -926,7 +957,6 @@ textarea{
     margin-top: 3%;
 }
 }
-
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     #welcome{
@@ -947,10 +977,13 @@ textarea{
     min-height: 30vh;
 }
 /*---------------------SERVICOS-----------------------*/
-    .services-container{
+.services-container{
         width: 90%;
     }
 /*---------------------coments--------------------*/
+#coments-clients, .slider{
+    min-height: 75vh;
+}
 .coments{
     width: 45%;
 }

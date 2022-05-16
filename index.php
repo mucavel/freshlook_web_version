@@ -15,7 +15,6 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
     <link rel="icon" href="imagens/favicon.webp">
     <link rel="stylesheet" href="css/index.css">
-    <!-- <link rel="stylesheet" href="css/old_browser.css"> -->
     <!-- <script src="javascript/jquery.js"></script>
     <script src="javascript/jquery-ui.js"></script> -->
     <title>Fresh Look</title>
@@ -204,27 +203,84 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <div class="coment-h2">
                 <h2 id="coment-sub">Comentários dos <span class="span">nossos Clientes</span></h2>
             </div>
-            <div class="coments-container">
-                <img class="arrow" src="imagens/seta-reverse.webp" alt="seta">
-                <div class="coments-slider">
+            <div class="slider">
+
+                <div class="coment-slide coment_part-one">
                     <div class="coments" id="coment-1">
                         <img class="profile" src="imagens/profile.webp" alt="Perfil">
                         <p class="coment">
                             " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
-                           Os barbeiros da Barbearia Fresh Look são os melhores "!
+                            Os barbeiros da Barbearia Fresh Look são os melhores! "
                         </p>
-                        <p class="client">- Osmane -</p>
+                        <p class="client">- Osman -</p>
                     </div>
                     <div class="coments" id="coment-2">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
+                        <p class="coment">
+                             " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
+                            Os barbeiros da Barbearia Fresh Look são os melhores! "
+                        </p>
+                        <p class="client">- Darken -</p>
+                    </div>          
+                </div>
+
+                <div class="coment-slide coment_part-two">
+                    <div class="coments" id="coment-3">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
+                        <p class="coment">
+                            " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
+                            Os barbeiros da Barbearia Fresh Look são os melhores! "
+                        </p>
+                        <p class="client">- Mário -</p>
+                    </div>
+                    <div class="coments" id="coment-4">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
+                        <p class="coment">
+                             " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
+                            Os barbeiros da Barbearia Fresh Look são os melhores! "
+                        </p>
+                        <p class="client">- Gildo -</p>
+                    </div>  
+                </div>
+
+                <div class="coment-slide coment_part-three">
+                    <div class="coments" id="coment-5">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
+                        <p class="coment">
+                            " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
+                                Os barbeiros da Barbearia Fresh Look são os melhores! "
+                        </p>
+                        <p class="client">- Hilário -</p>
+                    </div>
+                    <div class="coments" id="coment-6">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
+                        <p class="coment">
+                            " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
+                                Os barbeiros da Barbearia Fresh Look são os melhores! "
+                        </p>
+                        <p class="client">- Jeremias -</p>
+                    </div>  
+                </div>
+
+                <div class="coment-slide coment_part-four">
+                    <div class="coments" id="coment-7">
+                        <img class="profile" src="imagens/profile.webp" alt="Perfil">
+                        <p class="coment">
+                            " Quando um homem encontra o barbeiro certo, a vida dele se transforma.
+                                Os barbeiros da Barbearia Fresh Look são os melhores! "
+                        </p>
+                        <p class="client">- Glercio -</p>
+                    </div>
+                    <div class="coments" id="coment-8">
                         <img class="profile" src="imagens/profile.webp" alt="Perfil">
                         <p class="coment">
                             " Todo homem que preza pela aparência precisa de um bom barbeiro. Na barbearia
                             Fresh Look voce encontra os melhores profissionais do mercado! "
                         </p>
-                        <p class="client">- Darken -</p>
-                    </div>
+                        <p class="client">- Tomas -</p>
+                    </div>  
                 </div>
-                <img class="arrow" src="imagens/seta.webp" alt="seta">
+
             </div>
         </section>
         <!------------------------------------------------------------------->
