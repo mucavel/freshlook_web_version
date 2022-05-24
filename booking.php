@@ -9,7 +9,7 @@ Class Booking{
         } catch (PDOException $p) {
             echo "Erro com a base de dados.".$p->getMessage();
         }
-        catch(Excepton $g){
+        catch(Exception $g){
             echo "Erro generico".$g->getMessage();
         }
     }
@@ -37,11 +37,13 @@ Class Booking{
             $cmd->bindValue(":hora",$hora);
             $cmd->bindValue(":observ",$observ);
             $cmd->execute();
-
+            
             return true;
         }
     }
-
+        public function teste(){
+            echo 'ola';
+        }
     //VALIDAR NOME
     public function nomeVerif($nome){
         if(empty($nome)){

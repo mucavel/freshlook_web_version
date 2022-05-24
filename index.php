@@ -15,6 +15,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
     <link rel="icon" href="imagens/favicon.webp">
     <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="css/old_browser.css"> -->
     <!-- <script src="javascript/jquery.js"></script>
     <script src="javascript/jquery-ui.js"></script> -->
     <title>Fresh Look</title>
@@ -83,7 +84,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <div class="about-h2">
                 <h2>Acerca de <span class="span">nós</span></h2>
             </div>
-            <div id="about-us-container">
+            <div id="about-us-container" class="reveal">
                 <div class="about" id="about-text">
                     <div class="about-us-h3">
                         <h3>Barbearia</h3><br>
@@ -109,7 +110,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <div id="our-services-h2">
                 <h2><span class="span">Nossos</span> Serviços</h2>
             </div>
-            <div class="services-container">
+            <div class="services-container reveal">
             <div id="haircut" class="services">
                     <div class="services-img">
                         <img src="imagens/haircut-machine.webp" alt="Haircut">
@@ -203,7 +204,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <div class="coment-h2">
                 <h2 id="coment-sub">Comentários dos <span class="span">nossos Clientes</span></h2>
             </div>
-            <div class="slider">
+            <div class="slider reveal">
 
                 <div class="coment-slide coment_part-one">
                     <div class="coments" id="coment-1">
@@ -290,7 +291,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <div class="contact-h2">
                 <h2><span class="span">Localize</span>-nos</h2>
             </div>
-            <div id="contact-container">
+            <div id="contact-container" class="reveal">
                 <div id="map-container" class="contact-item">
                     <iframe title="fresh-look-map" id="map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7174.16903118695!2d32.59159693472878!3d-25.965268422142803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ee69bcf78b5b04f%3A0x397b498c151fc907!2sGentleman&#39;s%20Barber%20Shop!5e0!3m2!1spt-PT!2smz!4v1647895107018!5m2!1spt-PT!2smz"
@@ -300,7 +301,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                     <div class="fader-contact">
                         <h3>Nosso endereço</h3>
                         <p>Avenida Mao Tse Tung, Nº 412, Maputo</p>
-                        <p><span style="color: #fff">Telefone: (+258) 845509796</span></p>
+                        <p><span style="color: white;">Telefone: (+258) 845509796</span></p>
                         <h3>Horários</h3>
                         <p>Segunda à Sexta-feira</p>
                         <p>Das 08:00 às 21:30</p>
@@ -317,7 +318,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
             <div class="formulario-h2">
                 <h2 id="form-h2">Faça sua <span class="span"> Reserva</h2>
             </div>
-            <div class="formulario-reserva-container">
+            <div class="formulario-reserva-container reveal">
                 <div id="fader">
                     <!--------------------------------------------//
                         CODIGO PHP PARA CAPTURAR E VALIDAR VALORES DO FORMULARIO
@@ -345,25 +346,37 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                             $preco;
                             switch ($corte) {
                                 case 'Juba':
-                                    $preco = "50 Meticais";
-                                    break;
-                                case 'Carreca':
-                                    $preco = "80 Meticais";
-                                    break;
-                                case 'Punk':
-                                    $preco = "150 Meticais";
-                                    break;
-                                case 'Escovinha Grosaa':
-                                    $preco = "120 Meticais";
-                                    break;
-                                case 'Escovinha Fina':
                                     $preco = "100 Meticais";
                                     break;
-                                case 'Barba':
+                                case 'Carreca':
+                                    $preco = "120 Meticais";
+                                    break;
+                                case 'Punk':
+                                    $preco = "170 Meticais";
+                                    break;
+                                case 'Escovinha Grosaa':
+                                    $preco = "150 Meticais";
+                                    break;
+                                case 'Escovinha Fina':
                                     $preco = "130 Meticais";
                                     break;
-                                case 'Cabelo e Barba':
+                                case 'Coloracao de Cabelo':
                                     $preco = "200 Meticais";
+                                    break;
+                                case 'Barba c/ Navalha':
+                                    $preco = "150 Meticais";
+                                    break;
+                                case 'Barba c/ Maquina':
+                                    $preco = "100 Meticais";
+                                    break;
+                                case 'Cabelo e Barba c/ Maquina':
+                                    $preco = "250 Meticais";
+                                    break;
+                                case 'Cabelo e Barba c/ Navalha':
+                                    $preco = "300 Meticais";
+                                    break;
+                                case 'Mascara Facial':
+                                    $preco = "400 Meticais";
                                     break;
                                 default:
                                     $preco = "Sem preço";
@@ -414,8 +427,12 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
                                 <option value="Punk">Punk</option>
                                 <option value="Escovinha Grossa">Escovinha Grossa</option>
                                 <option value="Escovinha Fina">Escovinha Fina</option>
-                                <option value="Barba">Barba</option>
-                                <option value="Cabelo e Barba">Cabelo & Barba</option>
+                                <option value="Coloracao de Cabelo">Coloração de Cabelo</option>
+                                <option value="Barba c/ Navalha">Barba c/ Navalha</option>
+                                <option value="Barba c/ Maquina">Barba c/ Máquina</option>
+                                <option value="Cabelo e Barba c/ Navalha">Cabelo e Barba c/ Navalha</option>
+                                <option value="Cabelo e Barba c/ Maquina">Cabelo e Barba c/ Máquina</option>
+                                <option value="Mascara Facial">Máscara Facial</option>
                             </select>
                             <label for="preco">Preço</label>
                             <div id="preco" class="preco"><span id="valor" class="valor"></span> </div>
@@ -463,6 +480,7 @@ if (!empty($_COOKIE['theme']) && $_COOKIE['theme'] == 'dark') {
         </div>
     </footer>
     <script src="javascript/index.js"></script>
+    <script src="javascript/reveal.js"></script>
 </body>
 
 </html>

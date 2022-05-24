@@ -34,14 +34,15 @@ html{
     --services-section-color: rgb(238, 238, 238);
     --services-bg-color: rgb(255, 255, 255);
     --services-box-shadow: rgb(194, 193, 193);
+    --services-border: 1px solid rgb(95, 90, 90);
     --coments-section-color: rgb(255, 255, 255);
+    --light-brightness : 90%;
     --brown: rgb(124, 126, 14);
     --brown-hover: rgb(159, 161, 24);
     --error-red: rgb(241, 33, 33);
     --sucess-green: rgb(6, 167, 19);
     --footer-bg-color: rgb(0,0,0);
     --fade-black: rgba(0, 0, 0, 0.6);
-
 
 }
 .dark-theme{
@@ -52,13 +53,27 @@ html{
     --services-section-color: rgb(0, 0, 0);
     --services-bg-color: rgb(19,19,19);
     --services-box-shadow: rgb(0, 0, 0);
+    --services-border: 1px solid rgb(66, 66, 66);
     --coments-section-color: rgb(7,7,8);
+    --light-brightness : 60%;
     --brown: rgb(124, 126, 14);
     --brown-hover: rgb(159, 161, 24);
     --error-red: rgb(165, 8, 8);
     --sucess-green: rgb(1, 105, 10);
     --fade-black: rgba(0, 0, 0, 0.6);
+
 }
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
 /*-------------------------------*/
 
 noscript{
@@ -258,8 +273,9 @@ body h3{
     text-transform: unset;
 }
 #about-img{
-    background: url(../imagens/form-bg.webp);
+    background: url(../imagens/about-us.webp);
     background-size: cover;
+    filter: brightness(var(--light-brightness));
 }
 /*------------------------------------------------*/
 /*---------------------NOSSOS SERVICOS------------*/
@@ -296,6 +312,7 @@ body h3{
     border-radius: 5px;
     text-align: center;
     box-shadow: 1px 1px 3px 1px var(--services-box-shadow);
+    border: var(--services-border);
 }
 .services-img img{
     padding: 20px 0 0 0;
@@ -558,6 +575,21 @@ textarea{
     background-color: var(--brown-hover);
     cursor: pointer;
 }
+
+#idade:invalid{
+    animation: shake 300ms;
+}
+@keyframes shake {
+    25%{
+        transform: translatex(4px);
+    }
+    50%{
+        transform: translatex(-4px);
+    }
+    75%{
+        transform: translatex(4px);
+    }
+}
 /*------------------------------------------------*/
 /*---------------------RODAPE---------------------*/
 /*------------------------------------------------*/
@@ -618,6 +650,9 @@ textarea{
 #coments-clients, .slider{
     min-height: 80vh;
 }
+input[type="date"]{
+    width: 80%;
+}
 }
 @media screen and (min-width: 572px) and (max-width: 640px){ 
 .mode1{
@@ -633,6 +668,9 @@ textarea{
         display: flex;
         flex-direction: row;
         justify-content: center;
+}
+input[type="date"]{
+    width: 80%;
 }
 }
 @media screen and (max-width: 571px){
@@ -787,6 +825,9 @@ textarea{
 .footer-item{
     width: 100%;
     line-height: 100px;
+}
+input[type="date"]{
+    width: 80%;
 }
 
 }

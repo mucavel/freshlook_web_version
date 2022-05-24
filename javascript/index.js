@@ -30,9 +30,25 @@ let imgTheme_1 = document.getElementsByClassName("mode1")[0].addEventListener("c
     document.cookie = "theme="+theme;
     
 })
+
 //DATEPICKER-BLOQUEAR DATAS PASSADAS
 var datepicker = document.getElementById("dia");
 datepicker.min = new Date().toISOString().split("T")[0];
+
+//BLOQUEAR DATAS FUTURAS
+let dia = new Date();
+// let dd = dia.getDate()+ 13;
+// let mm = dia.getMonth() + 1;
+let yyyy = dia.getFullYear();
+// if(dd < 10){
+//     dd = '0'+ dd;
+// }
+// if(mm < 10){
+//     mm = '0'+ mm;
+// }
+data_futura = yyyy + '-' + 12 + '-' + 31;
+datepicker.setAttribute("max", data_futura);
+
 //MOFICAR DATA DINAMICAMENTE
 datepicker.addEventListener("change", () =>{
     let dia = new Date(datepicker.value);
@@ -70,59 +86,51 @@ datepicker.addEventListener("change", () =>{
         }    
     } 
 })
-
-//CARROSSEL
 //PRECO
 let preco = document.getElementById('valor');
-let corte = document.getElementById('corte');
+let corte = document.getElementById('corte').onchange=mostrarPreco;
 
 function mostrarPreco(){
   let valor = document.forms[0].corte.value;
 
     switch (valor) {
         case "":
-            preco.innerText = "";
+            preco.innerText = "Sem preco";
             break;
         case "Juba":
-            preco.innerText = "50 Meticais";
-            break;
-        case "Carreca":
-            preco.innerText = "80 Meticais";
-            break;
-        case "Punk":
-            preco.innerText = "150 Meticais";
-            break; 
-        case "Escovinha Grossa":
-            preco.innerText = "120 Meticais";
-            break; 
-        case "Escovinha Fina":
             preco.innerText = "100 Meticais";
             break;
-        case "Barba":
+        case "Carreca":
+            preco.innerText = "120 Meticais";
+            break;
+        case "Punk":
+            preco.innerText = "170 Meticais";
+            break; 
+        case "Escovinha Grossa":
+            preco.innerText = "150 Meticais";
+            break; 
+        case "Escovinha Fina":
             preco.innerText = "130 Meticais";
             break;
-        case "Cabelo e Barba":
+        case "Coloracao de Cabelo":
             preco.innerText = "200 Meticais";
+            break;
+        case "Barba c/ Navalha":
+            preco.innerText = "150 Meticais";
+            break;
+        case "Barba c/ Maquina":
+            preco.innerText = "100 Meticais";
+            break;
+        case "Cabelo e Barba c/ Maquina":
+            preco.innerText = "250 Meticais";
+            break;
+        case "Cabelo e Barba c/ Navalha":
+            preco.innerText = "300 Meticais";
+            break;
+        case "Mascara Facial":
+            preco.innerText = "400 Meticais";
             break;
         default:
             break;
     }
 }
-corte.onchange=mostrarPreco;
-mostrarPreco();
-
-//------------------------------------------------//
-//BLOQUEAR DATAS FUTURAS
-// let dia = new Date();
-// let dd = dia.getDate()+ 13;
-// let mm = dia.getMonth() + 1;
-// let yyyy = dia.getFullYear();
-
-// if(dd < 10){
-//     dd = '0'+ dd;
-// }
-// if(mm < 10){
-//     mm = '0'+ mm;
-// }
-// data_futura = yyyy + '-' + mm + '-' + dd;
-// datepicker.setAttribute("max", data_futura);
