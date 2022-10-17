@@ -4,4 +4,4 @@ A versão Desktop em JAVA da mesma Aplicação encontra-se em: https://github.co
 
 Versão de teste hospedada disponivel em: http://barbeariafreshlook.rf.gd
 
-NB: APLICAÇÃO AINDA EM DESENVOLVIMENTO.
+
